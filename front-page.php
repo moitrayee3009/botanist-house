@@ -1,4 +1,4 @@
 <?php get_header() ?>
-Hello.
+Below is our vue app:
 <div id="app"></div>
 <?php get_footer() ?>
