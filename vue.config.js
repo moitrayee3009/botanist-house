@@ -2,12 +2,14 @@
 module.exports = {
   filenameHashing: false,
   css: {
-    // loaderOptions: {
-    //   sass: {
-    //     data: `
-    //       @import "@/assets/styles/main.scss";
-    //     `
-    //   }
-    // }
+    loaderOptions: {
+      sass: {
+        sassOptions: {
+          data: `
+          @import "@/assets/styles/_variables.scss";
+        `
+        }
+      }
+    }
   }
 }
