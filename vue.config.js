@@ -2,6 +2,7 @@
 module.exports = {
   filenameHashing: false,
   css: {
+    extract: true,
     loaderOptions: {
       sass: {
         sassOptions: {
