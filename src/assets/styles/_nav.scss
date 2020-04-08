@@ -2,9 +2,40 @@
 //  To check these style while editing: 
 //  Run 'build-watch' from the 'NPM SCRIPTS - dropdown'
 
-.menu {
-  background-color: pink !important;
-  li a {
-    font-weight: bold;;
+
+.site-header {
+  display: flex;
+  flex: 1;
+  justify-content: space-between;
+  padding-top: 2rem !important;
+  border-bottom-width: 0px !important;
+  height: 6rem;
+  .col-full {
+    padding-left: 0 !important;
+  }
+  .site-branding {
+    font-size: 0.7rem;
+    padding: 0 !important;
+    text-transform: uppercase;
+  }
+  .site-search {
+    display: none !important;
+  }
+  .menu {
+  // background-color: pink !important;
+  display: flex;
+  justify-content: flex-end;
+  margin-left: 0 !important;
+    li a {
+      font-weight: bold;
+      padding: 0 1rem  !important;
+      .cart-contents {
+      height: 1rem !important;
+      
+      }
+    }
+    li a span .woocommerce-Price-amount  {
+        display: none !important;
+      }
   }
 }
