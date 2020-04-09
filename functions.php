@@ -47,4 +47,4 @@ function cc_mime_types($mimes)
     $file_types = array_merge($mimes, $new_filetypes);
     return $file_types;
 }
-add_action('upload_mimes', __NAMESPACE__ . '\\cc_mime_types');
+add_action('upload_mimes', 'cc_mime_types');
