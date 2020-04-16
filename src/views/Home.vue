@@ -18,12 +18,11 @@ export default {
   mounted () {
     this.content = getPageContent()
   },
-  components: {
-  }
+  components: {}
 }
 </script>
 <style lang="scss">
 .home-content {
-  background-color: blue;
+  background-color: transparent;
 }
 </style>

@@ -36,5 +36,5 @@ endwhile; // End of the loop. ?>
 	</div><!-- #primary -->
 
 <?php
-do_action('storefront_sidebar');
+// do_action('storefront_sidebar');
 get_footer();
