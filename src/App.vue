@@ -9,9 +9,10 @@
 </template>
 
 <style lang="scss">
-@import "@/assets/styles/main.scss";
+@import '@/assets/styles/main.scss';
+@import '@/assets/styles/_variables.scss';
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: Freight, Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
@@ -28,6 +29,39 @@
     &.router-link-exact-active {
       color: #42b983;
     }
+  }
+}
+.wp-block-cover .wp-block-cover__inner-container {
+  width: calc(100% - 70px);
+  z-index: 1;
+  color: #f8f9f9;
+  text-align: center;
+  font-size: 3rem;
+  font-family: Freight !important;
+  font-weight: 500;
+  letter-spacing: -2px;
+  color: #ffffff;
+  opacity: 1;
+  p {
+    margin: 0;
+  }
+}
+.wp-block-buttons .wp-block-button {
+  margin: 0 !important;
+}
+.wp-block-button .is-style-fill .wp-block-button__link {
+  background-color: white;
+  :focus {
+    border: none !important;
+  }
+}
+.wp-block-button__link:not(.has-background) {
+  background-color: white;
+  padding: 0.3rem 2rem;
+  font-weight: 500 !important;
+  letter-spacing: 1.44px;
+  :focus {
+    border: none !important;
   }
 }
 </style>

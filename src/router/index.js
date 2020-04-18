@@ -2,6 +2,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import Page from '../views/Page.vue'
+import Articles from '@/components/Articles.vue'
 
 Vue.use(VueRouter)
 
@@ -15,6 +16,11 @@ const routes = [
     path: '/:page',
     name: 'Page',
     component: Page
+  },
+  {
+    path: '/articles/:article',
+    name: 'article',
+    component: Articles
   }
 ]
 
