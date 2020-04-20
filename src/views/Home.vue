@@ -2,11 +2,10 @@
   <div class="home">
     <div class="home-content" v-html="content"></div>
     <div class="selection">
-      SELECTION HERE
       <Selection
         v-for="product in products"
         :key="product.id"
-        :product="products"
+        :product="product"
       />
     </div>
   </div>
@@ -34,11 +33,22 @@ export default {
 
     ProductServices.getProducts()
       .then((response) => {
+        // Successful request
         this.products = response.data
-        console.log(response.data)
+        console.log('Response Status:', response.status)
+        console.log('Response Headers:', response.headers)
+        console.log('Response Data:', response.data)
+        console.log('Total of pages:', response.headers['x-wp-totalpages'])
+        console.log('Total of items:', response.headers['x-wp-total'])
       })
       .catch((error) => {
-        console.log('there is an error:' + error.response)
+        // Invalid request, for 4xx and 5xx statuses
+        console.log('Response Status:', error.response.status)
+        console.log('Response Headers:', error.response.headers)
+        console.log('Response Data:', error.response.data)
+      })
+      .finally(() => {
+        // Always executed.
       })
   }
 }
@@ -46,5 +56,10 @@ export default {
 <style lang="scss">
 .home-content {
   background-color: transparent;
+}
+.selection {
+  display: flex;
+  justify-content: space-around;
+  margin: 2rem auto;
 }
 </style>
