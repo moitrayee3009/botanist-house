@@ -10,12 +10,12 @@ const apiClient = axios.create({
 })
 
 export default {
-  getProducts() {
+  getProducts () {
     return apiClient.get(
       '/wp-json/wc/v3/products?consumer_key=[]&consumer_secret=[]'
     )
   },
-  getProduct() {
+  getProduct () {
     return apiClient.get()
   }
 }
