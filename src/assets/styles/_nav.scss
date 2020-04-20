@@ -15,6 +15,7 @@
   margin-right: auto;
   // height: 6rem;
   box-sizing: border-box;
+
   @media (min-width: 768px) {
     padding: 2.5rem;
   }
@@ -31,6 +32,9 @@
     align-items: flex-end;
     min-width: 12rem;
     margin: 0 !important;
+    :focus {
+      outline: none;
+    }
     .site-title a {
       display: flex;
       align-items: flex-start;
@@ -55,6 +59,9 @@
         height: 1rem !important;
       }
     }
+  }
+  .main-navigation ul li :focus {
+    outline: none;
   }
   .site-header-cart .cart-contents .amount {
     display: none;

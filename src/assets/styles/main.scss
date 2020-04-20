@@ -3,3 +3,7 @@ html {
 }
 @import 'variables';
 @import 'nav';
+
+.entry-title {
+  color: $pageHeaderText;
+}
