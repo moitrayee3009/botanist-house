@@ -9,6 +9,9 @@
         :product="product"
       />
     </div>
+    <div>
+      <Articles v-for="post in posts" :key="post.id" :post="post" />
+    </div>
   </div>
 </template>
 
@@ -16,20 +19,23 @@
 // @ is an alias to /src
 import { getPageContent } from '@/utils/getPageContent.js'
 import Selection from '@/components/Selection.vue'
+import Articles from '@/components/Articles.vue'
 import ProductServices from '@/services/ProductServices.js'
 
 export default {
   name: 'Home',
   components: {
-    Selection
+    Selection,
+    Articles
   },
-  data () {
+  data() {
     return {
       content: '...',
-      products: [{}]
+      products: [{}],
+      posts: [{}]
     }
   },
-  mounted () {
+  mounted() {
     this.content = getPageContent()
 
     ProductServices.getProducts()
