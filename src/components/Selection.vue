@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <div class="product">
-      <div class="image">{{ product.images[0].src }}</div>
+      <div class="image"><img :src="product.images[0].src" /></div>
       <h4 class="name">{{ product.name }}</h4>
       <p class="price">€{{ product.price }}.00</p>
     </div>
@@ -22,14 +22,15 @@ export default {
   display: flex;
   flex: 1;
   box-sizing: border-box;
+  justify-content: center;
   .product {
-    display: flex;
     flex-flow: column wrap;
     text-align: left;
     width: fit-content;
     height: auto;
-    /* padding: 2rem; */
+    padding: 1rem;
     box-sizing: border-box;
+
     .image {
       margin-bottom: 1rem;
     }

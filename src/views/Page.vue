@@ -1,6 +1,6 @@
 <template>
   <div class="page">
-    <h1>This is a regular page!!</h1>
+    <!-- <h1>This is a regular page!!</h1> -->
     <div class="content" v-html="content"></div>
   </div>
 </template>

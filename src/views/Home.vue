@@ -66,5 +66,8 @@ export default {
   justify-content: space-evenly;
   padding: 2rem 0;
   box-sizing: border-box;
+  @media (max-width: $mobileL) {
+    flex-flow: column wrap;
+  }
 }
 </style>

@@ -48,3 +48,21 @@ function cc_mime_types($mimes)
     return $file_types;
 }
 add_action('upload_mimes', 'cc_mime_types');
+
+/**
+ * Remove breadcrumbs
+*/
+
+add_action( 'init', 'storefront_remove_storefront_breadcrumbs' );
+ 
+function storefront_remove_storefront_breadcrumbs() {
+   remove_action( 'storefront_before_content', 'woocommerce_breadcrumb', 10 );
+}
+
+/**
+ * Remove post-header
+*/
+
+add_action( 'init', function() {
+    remove_action( 'storefront_loop_post', 'storefront_post_header', 10 );
+} );

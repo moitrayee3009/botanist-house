@@ -5,5 +5,48 @@ html {
 @import 'nav';
 
 .entry-title {
+  font-family: Freight;
+  font-weight: $semiBold;
   color: $pageHeaderText;
+  margin-top: -8%;
+  @media (max-width: $tabletL) {
+    margin-top: -8%;
+  }
+  @media (max-height: $laptopL) {
+    margin-top: -5.5%;
+  }
+  @media (max-width: $mobileL) {
+    margin-top: -15.5%;
+    font-size: 2rem;
+  }
+}
+
+.site-content {
+  margin-top: 2%;
+  background-color: $pageBackground !important;
+}
+.about-text {
+  max-width: 70%;
+  margin: auto;
+}
+home .page-id-38 {
+  background-color: white;
+}
+// .woocommerce-breadcrumb {
+//   display: none;
+// }
+.hentry .entry-header {
+  margin-bottom: 0 !important;
+  border-bottom: transparent !important;
+}
+.cat-links,
+.hentry .entry-taxonomy {
+  display: none !important;
+}
+
+article {
+  margin-bottom: 0 !important;
+}
+#main {
+  padding-top: 2rem;
 }
