@@ -16,12 +16,6 @@ const routes = [
     path: '/:page',
     name: 'Page',
     component: Page
-  },
-
-  {
-    path: '/articles/:article',
-    name: 'article',
-    component: Articles
   }
 ]
 

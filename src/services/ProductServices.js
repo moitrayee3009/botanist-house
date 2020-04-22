@@ -9,7 +9,7 @@ const apiClient = new WooCommerceRestApi({
 
 export default {
   getProducts () {
-    return apiClient.get('products?_embed', { per_page: 20 })
+    return apiClient.get('products', { per_page: 20 })
   },
   getProduct () {
     return apiClient.get()
