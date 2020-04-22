@@ -1,6 +1,7 @@
 <template>
   <div>
-    <div v-for="post in posts">
+    <h1 class="entry-title">ARTICLES</h1>
+    <div class="post" v-for="post in posts">
       <img :src="post.fimg_url" />
     </div>
   </div>
@@ -39,4 +40,8 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.post {
+  margin-bottom: 1rem;
+}
+</style>

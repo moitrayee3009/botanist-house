@@ -1,16 +1,15 @@
 <template>
   <div class="home">
     <div class="home-content" v-html="content"></div>
-    <h1 class="entry-title">SELECTION</h1>
     <div class="selection">
-      <Selection
-        v-for="product in products"
-        :key="product.id"
-        :product="product"
-      />
-    </div>
-    <div>
-      <Articles v-for="post in posts" :key="post.id" :post="post" />
+      <h1 class="homePage-entry-title">SELECTION</h1>
+      <div class="selection-product">
+        <Selection
+          v-for="product in products"
+          :key="product.id"
+          :product="product"
+        />
+      </div>
     </div>
   </div>
 </template>
@@ -19,20 +18,17 @@
 // @ is an alias to /src
 import { getPageContent } from '@/utils/getPageContent.js'
 import Selection from '@/components/Selection.vue'
-import Articles from '@/components/Articles.vue'
 import ProductServices from '@/services/ProductServices.js'
 
 export default {
   name: 'Home',
   components: {
-    Selection,
-    Articles
+    Selection
   },
   data() {
     return {
       content: '...',
-      products: [{}],
-      posts: [{}]
+      products: [{}]
     }
   },
   mounted() {
@@ -66,14 +62,37 @@ export default {
   background-color: transparent;
 }
 .selection {
-  background-color: $pageBackground;
   display: flex;
-  flex: 1;
-  justify-content: space-evenly;
-  padding: 2rem 0;
-  box-sizing: border-box;
-  @media (max-width: $mobileL) {
-    flex-flow: column wrap;
+  flex-direction: column;
+  width: inherit;
+  background-color: $pageBackground;
+  .homePage-entry-title {
+    text-align: center;
+    font-family: Freight;
+    font-weight: $semiBold;
+    color: $pageHeaderText;
+    margin-top: -2.5%;
+    @media (max-width: $tabletL) {
+      margin-top: -4%;
+    }
+    /* @media (max-height: $laptopL) {
+      margin-top: -5.5%;
+    } */
+    @media (max-width: $mobileL) {
+      margin-top: -6.5%;
+      font-size: 2rem;
+    }
+  }
+
+  .selection-product {
+    display: flex;
+    flex: 1;
+    justify-content: space-evenly;
+    /* padding: 2rem 0; */
+    box-sizing: border-box;
+    @media (max-width: $mobileL) {
+      flex-flow: column wrap;
+    }
   }
 }
 </style>

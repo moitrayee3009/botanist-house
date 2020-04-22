@@ -1,10 +1,15 @@
 <template>
   <div class="container">
-    <div class="product">
-      <div class="image"><img :src="product.images[0].src" /></div>
-      <h4 class="name">{{ product.name }}</h4>
-      <p class="price">€{{ product.price }}.00</p>
-    </div>
+    <router-link
+      class="product-link"
+      :to="{ name: 'single-product', params: { id: product.id } }"
+    >
+      <div class="product">
+        <div class="image"><img :src="product.images[0].src" /></div>
+        <h4 class="name">{{ product.name }}</h4>
+        <p class="price">€{{ product.price }}.00</p>
+      </div>
+    </router-link>
   </div>
 </template>
 

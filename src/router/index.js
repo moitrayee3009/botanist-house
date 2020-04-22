@@ -13,9 +13,21 @@ const routes = [
     component: Home
   },
   {
+    path: '/articles',
+    name: 'PostPage',
+    component: Articles
+  },
+  {
     path: '/:page',
     name: 'Page',
     component: Page
+  },
+
+  {
+    path: '/:id',
+    name: 'single-product',
+    component: Selection,
+    props: true
   }
 ]
 

@@ -63,9 +63,10 @@ function storefront_remove_storefront_breadcrumbs() {
  * Remove post-header
 */
 
-add_action( 'init', function() {
-    remove_action( 'storefront_loop_post', 'storefront_post_header', 10 );
-} );
+// add_action( 'init', function() {
+//     remove_action( 'storefront_loop_post', 'storefront_post_header', 10 );
+// } );
+
 
 /**
  * Featured image

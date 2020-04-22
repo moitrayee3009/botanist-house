@@ -4,6 +4,20 @@ html {
 @import 'variables';
 @import 'nav';
 
+.home .site-header {
+  margin-bottom: 0 !important;
+}
+.wp-block-cover .wp-block-cover__inner-container p {
+  font-size: 46px;
+  @media (max-width: $tabletL) {
+    font-size: 36px !important;
+  }
+  @media (max-width: $mobileL) {
+    font-size: 30px !important;
+    letter-spacing: 1 !important;
+  }
+}
+
 .entry-title {
   font-family: Freight;
   font-weight: $semiBold;
@@ -21,7 +35,9 @@ html {
   }
 }
 
-.site-content {
+.page-id-107 .site-content,
+.page-id-19 .site-content,
+.page-id-13 .site-content {
   margin-top: 2%;
   background-color: $pageBackground !important;
 }
@@ -29,12 +45,7 @@ html {
   max-width: 70%;
   margin: auto;
 }
-home .page-id-38 {
-  background-color: white;
-}
-// .woocommerce-breadcrumb {
-//   display: none;
-// }
+
 .hentry .entry-header {
   margin-bottom: 0 !important;
   border-bottom: transparent !important;
