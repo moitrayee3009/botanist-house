@@ -16,9 +16,10 @@
   height: 6rem;
   box-sizing: border-box;
 
-  @media (min-width: 768px) {
+  @media (min-width: $tabletL) {
     padding: 2.5rem;
   }
+
   .col-full {
     display: flex;
     align-items: center;
@@ -32,6 +33,7 @@
     align-items: flex-end;
     min-width: 12rem;
     margin: 0 !important;
+    padding-bottom: 0.25rem;
     :focus {
       outline: none;
     }
@@ -69,14 +71,16 @@
   .site-header-cart .cart-contents span {
     display: none;
   }
+  .storefront-primary-navigation {
+    display: flex;
+    justify-content: flex-end;
+    flex-basis: 80%;
+    @media (max-width: $mobileL) {
+      flex-basis: 50%;
+    }
+  }
 
   .storefront-primary-navigation .site-header-cart .cart-contents:after {
-    background-image: url(assets/noun_cart_1832886.svg);
-    content: '';
-    height: 1.5em !important;
-    width: 1.5em !important;
-  }
-  .storefront-handheld-footer-bar ul li.cart > a::before {
     background-image: url(assets/noun_cart_1832886.svg);
     content: '';
     height: 1.5em !important;

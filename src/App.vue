@@ -37,7 +37,7 @@ export default {}
   }
 }
 .entry-content {
-  margin-bottom: 3rem !important;
+  margin-bottom: 2rem !important;
 }
 .wp-block-cover .wp-block-cover__inner-container {
   width: calc(100% - 70px);
