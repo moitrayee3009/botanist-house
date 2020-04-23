@@ -1,22 +1,24 @@
 <template>
   <div class="container">
-    <router-link
+    <!-- <router-link
       class="product-link"
       :to="{ name: 'single-product', params: { id: product.id } }"
-    >
-      <div class="product">
-        <div class="image"><img :src="product.images[0].src" /></div>
-        <h4 class="name">{{ product.name }}</h4>
-        <p class="price">€{{ product.price }}.00</p>
+    > -->
+    <div class="product">
+      <div class="image" v-if="product.images">
+        <img :src="product.images[0].src" />
       </div>
-    </router-link>
+      <h4 class="name">{{ product.name }}</h4>
+      <p class="price">€{{ product.price }}.00</p>
+    </div>
+    <!-- </router-link> -->
   </div>
 </template>
 
 <script>
 export default {
   props: {
-    product: Object
+    product: {}
   }
 }
 </script>
@@ -27,7 +29,6 @@ export default {
   display: flex;
   flex: 1;
   box-sizing: border-box;
-  justify-content: center;
   .product {
     flex-flow: column wrap;
     text-align: left;
