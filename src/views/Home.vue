@@ -2,20 +2,17 @@
   <div class="home">
     <div class="home-content" v-html="content"></div>
     <div class="selection">
-      <!-- <h1 class="homePage-entry-title">SELECTION</h1>
-      <div class="selection-product">
-        <Selection
-          v-for="product in products"
-          :key="product.id"
-          :product="product"
-        />
-      </div> -->
       <SelectionPage
         class="selection-feed"
         v-for="product in products"
         :key="product.id"
         :product="product"
       />
+      <div class="check-selection">
+        <router-link to="/selection" target="_blank">
+          Check Our Selection
+        </router-link>
+      </div>
     </div>
   </div>
 </template>
@@ -32,13 +29,13 @@ export default {
   components: {
     SelectionPage
   },
-  data () {
+  data() {
     return {
       content: '...',
       products: [{}]
     }
   },
-  mounted () {
+  mounted() {
     this.content = getPageContent()
   }
 }
@@ -52,12 +49,13 @@ export default {
   margin: 0 !important;
 }
 .home-content {
-  margin: 0 2rem;
+  margin: 0 2rem 2rem 2rem;
 }
 .selection {
   display: flex;
   flex-direction: column;
   width: inherit;
+  height: 50%;
   background-color: $pageBackground;
   margin-top: 2rem;
   /* padding-top: 2rem;
@@ -70,6 +68,26 @@ export default {
 
   .selection-feed {
     padding-top: 2rem;
+  }
+  .check-selection {
+    a {
+      display: flex;
+      justify-content: center;
+      width: fit-content;
+      padding: 0.3rem 2rem;
+      margin: 1rem auto;
+      text-align: center;
+      background-color: transparent;
+      color: $pageHeaderText;
+      font-weight: $semiBold;
+      font-size: $lg;
+    }
+    :focus {
+      border: none;
+    }
+    :hover {
+      background-color: #eeeeee;
+    }
   }
 }
 </style>
