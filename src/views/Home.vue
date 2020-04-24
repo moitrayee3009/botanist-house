@@ -58,7 +58,8 @@ export default {
   height: 50%;
   background-color: $pageBackground;
   margin-top: 2rem;
-  /* padding-top: 2rem;
+  padding-bottom: 2rem;
+  /* 
   @media (max-width: $laptopL) {
     padding-top: 2.5rem;
   }
@@ -70,17 +71,19 @@ export default {
     padding-top: 2rem;
   }
   .check-selection {
+    border: 1px solid #eeeeee;
+    width: fit-content;
+    margin: 0 auto;
     a {
       display: flex;
       justify-content: center;
       width: fit-content;
       padding: 0.3rem 2rem;
-      margin: 1rem auto;
       text-align: center;
       background-color: transparent;
       color: $pageHeaderText;
       font-weight: $semiBold;
-      font-size: $lg;
+      font-size: 1.5rem;
     }
     :focus {
       border: none;
