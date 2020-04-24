@@ -73,12 +73,12 @@ article {
   padding: 0 !important;
 }
 
-// storefront-handheld-footer-bar
+// storefront-handheld-footer-bar (icon changed to cart)
 .storefront-handheld-footer-bar ul li.cart > a::before {
   content: '\f07a' !important;
 }
 
-// handheld-navigation
+// handheld-navigation(mobile view)
 .handheld-navigation {
   background-color: white;
   position: absolute;
