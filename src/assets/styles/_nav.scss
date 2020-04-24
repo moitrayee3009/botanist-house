@@ -17,7 +17,16 @@
   box-sizing: border-box;
 
   @media (min-width: $tabletL) {
-    padding: 2.5rem;
+    padding: 1rem;
+  }
+
+  a {
+    @media (min-width: $tabletL) {
+      font-size: 0.8rem;
+    }
+    @media (min-width: $mobileL) {
+      font-size: 1.5rem;
+    }
   }
 
   .col-full {
@@ -55,8 +64,10 @@
     display: flex;
     justify-content: flex-end;
     margin: 0 !important;
+
     li a {
       padding: 0 1rem !important;
+      font-size: 1rem;
       .cart-contents {
         height: 1rem !important;
       }
@@ -75,6 +86,9 @@
     display: flex;
     justify-content: flex-end;
     flex-basis: 80%;
+    @media (max-width: $tabletL) {
+      flex-basis: 68%;
+    }
     @media (max-width: $mobileL) {
       flex-basis: 0;
     }
@@ -85,5 +99,6 @@
     content: '';
     height: 1.5em !important;
     width: 1.5em !important;
+    font-size: 1rem;
   }
 }
