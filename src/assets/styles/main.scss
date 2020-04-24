@@ -122,3 +122,11 @@ input[type='reset']:focus,
 input[type='submit']:focus {
   outline: none !important;
 }
+
+//About text
+
+.aboout-text-p1 {
+  text-align: center;
+  max-width: 70%;
+  margin: 0 auto 1rem auto;
+}
