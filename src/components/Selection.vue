@@ -2,7 +2,8 @@
   <div class="container">
     <!-- <router-link
       class="product-link"
-      :to="{ name: 'single-product', params: { id: product.id } }"
+      to="{ path: '/product/<name>', params: { name: product.name}}"
+      target="_blank"
     > -->
     <div class="product">
       <div class="image" v-if="product.images">

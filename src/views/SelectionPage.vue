@@ -51,6 +51,8 @@ export default {
   justify-content: space-around;
   padding-top: 1rem;
   height: fit-content;
+  margin-left: auto;
+  margin-right: auto;
   @media (max-width: $mobileL) {
     flex-flow: column wrap;
   }

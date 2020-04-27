@@ -102,3 +102,31 @@
     font-size: 1rem;
   }
 }
+
+//widget_shopping_cart list style
+.site-header-cart .widget_shopping_cart div.widget_shopping_cart_content {
+  height: auto;
+  width: auto;
+  font-size: 1rem !important;
+  ul {
+    max-height: 10em !important;
+    max-width: 100% !important;
+    display: flex !important;
+    li > a {
+      font-size: 0.8rem !important;
+      display: flex !important;
+      img {
+        height: 2rem;
+        width: 2rem;
+      }
+    }
+  }
+  p {
+    height: 1rem !important;
+    display: flex !important;
+    // font-size: 10px !important;
+    a {
+      font-size: 0.8rem !important;
+    }
+  }
+}

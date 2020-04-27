@@ -46,10 +46,6 @@ html {
   margin-top: 2%;
   background-color: $pageBackground !important;
 }
-.about-text {
-  max-width: 70%;
-  margin: auto;
-}
 
 .hentry .entry-header {
   margin-bottom: 0 !important;
@@ -129,4 +125,14 @@ input[type='submit']:focus {
   text-align: center;
   max-width: 70%;
   margin: 0 auto 1rem auto;
+}
+
+.about-text {
+  max-width: 70%;
+  margin: auto;
+}
+//single product page
+
+.product {
+  margin: 0 2rem;
 }

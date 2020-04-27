@@ -19,23 +19,17 @@ const routes = [
     name: 'PostPage',
     component: Articles
   },
-  {
-    path: '/selection',
-    name: 'SelectionPage',
-    component: SelectionPage,
-    props: true
-  },
+  // {
+  //   path: '/selection',
+  //   name: 'SelectionPage',
+  //   component: SelectionPage,
+  //   props: true
+  // },
+
   {
     path: '/:page',
     name: 'Page',
     component: Page
-  },
-
-  {
-    path: '/:id',
-    name: 'single-product',
-    component: Selection,
-    props: true
   }
 ]
 

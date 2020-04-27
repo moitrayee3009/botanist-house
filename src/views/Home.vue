@@ -29,13 +29,13 @@ export default {
   components: {
     SelectionPage
   },
-  data() {
+  data () {
     return {
       content: '...',
       products: [{}]
     }
   },
-  mounted() {
+  mounted () {
     this.content = getPageContent()
   }
 }
@@ -59,7 +59,7 @@ export default {
   background-color: $pageBackground;
   margin-top: 2rem;
   padding-bottom: 2rem;
-  /* 
+  /*
   @media (max-width: $laptopL) {
     padding-top: 2.5rem;
   }
