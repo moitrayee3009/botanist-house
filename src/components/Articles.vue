@@ -1,8 +1,11 @@
 <template>
   <div>
     <h1 class="entry-title">ARTICLES</h1>
+
     <div class="post" v-for="post in posts" :key="post.id">
-      <img :src="post.fimg_url" />
+      <a :href="post.slug">
+        <img :src="post.fimg_url" />
+      </a>
     </div>
   </div>
 </template>
@@ -11,11 +14,11 @@
 import axios from 'axios'
 
 export default {
-  mounted () {
+  mounted() {
     this.getPosts()
   },
 
-  data () {
+  data() {
     return {
       postsUrl: 'http://botanisthouse.local/wp-json/wp/v2/posts',
       posts: [],
@@ -25,7 +28,7 @@ export default {
     }
   },
   methods: {
-    getPosts () {
+    getPosts() {
       axios
         .get(this.postsUrl, { params: this.postsData })
         .then((response) => {

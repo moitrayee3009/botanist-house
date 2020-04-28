@@ -1,18 +1,14 @@
 <template>
   <div class="container">
-    <!-- <router-link
-      class="product-link"
-      to="{ path: '/product/<name>', params: { name: product.name}}"
-      target="_blank"
-    > -->
-    <div class="product">
-      <div class="image" v-if="product.images">
-        <img :src="product.images[0].src" />
+    <a :href="product.slug">
+      <div class="product">
+        <div class="image" v-if="product.images">
+          <img :src="product.images[0].src" />
+        </div>
+        <h4 class="name">{{ product.name }}</h4>
+        <p class="price">€{{ product.price }}.00</p>
       </div>
-      <h4 class="name">{{ product.name }}</h4>
-      <p class="price">€{{ product.price }}.00</p>
-    </div>
-    <!-- </router-link> -->
+    </a>
   </div>
 </template>
 
