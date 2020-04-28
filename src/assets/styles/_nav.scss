@@ -1,10 +1,132 @@
 //  The menu can be styled here!
-//  To check these style while editing: 
+//  To check these style while editing:
 //  Run 'build-watch' from the 'NPM SCRIPTS - dropdown'
+@import 'variables';
+.site-header {
+  font-family: Arial;
+  display: flex;
+  flex: 1;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding-bottom: 1rem !important;
+  border-bottom-width: 0px !important;
+  margin-bottom: 5rem !important;
+  margin-left: auto;
+  margin-right: auto;
+  height: 6rem;
+  box-sizing: border-box;
 
-.menu {
-  background-color: pink !important;
-  li a {
-    font-weight: bold;;
+  @media (min-width: $tabletL) {
+    padding: 1rem;
+  }
+
+  a {
+    @media (min-width: $tabletL) {
+      font-size: 0.8rem;
+    }
+    @media (min-width: $mobileL) {
+      font-size: 1.5rem;
+    }
+  }
+
+  .col-full {
+    display: flex;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+  }
+
+  .site-branding {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: flex-end;
+    min-width: 12rem;
+    margin: 0 !important;
+    padding-bottom: 0.25rem;
+    :focus {
+      outline: none;
+    }
+    .site-title a {
+      display: flex;
+      align-items: flex-start;
+      flex-flow: row nowrap;
+      font-size: 1rem;
+      font-weight: $bolder;
+      padding: 0 !important;
+      text-transform: uppercase;
+    }
+  }
+  .site-search {
+    display: none !important;
+  }
+  .menu {
+    // background-color: pink !important;
+    display: flex;
+    justify-content: flex-end;
+    margin: 0 !important;
+
+    li a {
+      padding: 0 1rem !important;
+      font-size: 1rem;
+      .cart-contents {
+        height: 1rem !important;
+      }
+    }
+  }
+  .main-navigation ul li :focus {
+    outline: none;
+  }
+  .site-header-cart .cart-contents .amount {
+    display: none;
+  }
+  .site-header-cart .cart-contents span {
+    display: none;
+  }
+  .storefront-primary-navigation {
+    display: flex;
+    justify-content: flex-end;
+    flex-basis: 80%;
+    @media (max-width: $tabletL) {
+      flex-basis: 68%;
+    }
+    @media (max-width: $mobileL) {
+      flex-basis: 0;
+    }
+  }
+
+  .storefront-primary-navigation .site-header-cart .cart-contents:after {
+    background-image: url(assets/noun_cart_1832886.svg);
+    content: '';
+    height: 1.5em !important;
+    width: 1.5em !important;
+    font-size: 1rem;
+  }
+}
+
+//widget_shopping_cart list style
+.site-header-cart .widget_shopping_cart div.widget_shopping_cart_content {
+  height: auto;
+  width: auto;
+  font-size: 1rem !important;
+  ul {
+    max-height: 10em !important;
+    max-width: 100% !important;
+    display: flex !important;
+    li > a {
+      font-size: 0.8rem !important;
+      display: flex !important;
+      img {
+        height: 2rem;
+        width: 2rem;
+      }
+    }
+  }
+  p {
+    height: 1rem !important;
+    display: flex !important;
+    // font-size: 10px !important;
+    a {
+      font-size: 0.8rem !important;
+    }
   }
 }

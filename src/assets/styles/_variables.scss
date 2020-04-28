@@ -1,0 +1,40 @@
+//Colors
+
+$pageBackground: #fff9f0;
+$priceText: #00961d;
+$productTitle: #000000;
+$pageHeaderText: #0062ff;
+
+// Font weights
+
+$light: 300;
+$regular: 400;
+$normal: 400;
+$medium: 400;
+$semiBold: 600;
+$bold: 700;
+$bolder: 900;
+
+// Sizes for typography scale
+
+$xs: 12px;
+$sm: calc(10px + 1vw);
+$base: calc(9px + 0.32vw);
+$lg: 18px;
+$xl: 20px;
+$xxl: 24px;
+$xxxl: 30px;
+$xxxxl: 36px;
+
+//  Responsive sizes
+
+$mobileS: 320px;
+$mobileM: 375px;
+$mobileL: 425px;
+$tabletS: 625px;
+$tabletL: 768px;
+$tabletW: 1024px;
+$laptopS: 1025px;
+$laptopM: 1300px;
+$laptopL: 1440px;
+$desktop: 2560px;

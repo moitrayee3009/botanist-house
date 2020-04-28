@@ -1,0 +1,10 @@
+.wp-block-cover .wp-block-cover__inner-container p {
+  font-size: 2.875rem;
+  @media (max-width: $tabletL) {
+    font-size: 2.25rem !important;
+  }
+  @media (max-width: $mobileL) {
+    font-size: 1.875rem !important;
+    letter-spacing: 1 !important;
+  }
+}
