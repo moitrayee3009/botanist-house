@@ -43,5 +43,7 @@ export default {
 <style lang="scss" scoped>
 .post {
   margin: 1rem;
+  display: flex;
+  justify-content: center;
 }
 </style>

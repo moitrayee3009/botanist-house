@@ -2,12 +2,7 @@
   <div class="home">
     <div class="home-content" v-html="content"></div>
     <div class="selection">
-      <SelectionPage
-        class="selection-feed"
-        v-for="product in products"
-        :key="product.id"
-        :product="product"
-      />
+      <SelectionGrid class="selection-feed" />
       <div class="check-selection">
         <router-link to="/selection" target="_blank">
           Check Our Selection
@@ -20,22 +15,19 @@
 <script>
 // @ is an alias to /src
 import { getPageContent } from '@/utils/getPageContent.js'
-// import Selection from '@/components/Selection.vue'
-// import ProductServices from '@/services/ProductServices.js'
-import SelectionPage from '@/views/SelectionPage.vue'
+import SelectionGrid from '@/components/SelectionGrid.vue'
 
 export default {
   name: 'Home',
   components: {
-    SelectionPage
+    SelectionGrid
   },
-  data () {
+  data() {
     return {
-      content: '...',
-      products: [{}]
+      content: '...'
     }
   },
-  mounted () {
+  mounted() {
     this.content = getPageContent()
   }
 }
@@ -57,15 +49,8 @@ export default {
   width: inherit;
   height: 50%;
   background-color: $pageBackground;
-  margin-top: 2rem;
+  margin-top: 6rem;
   padding-bottom: 2rem;
-  /*
-  @media (max-width: $laptopL) {
-    padding-top: 2.5rem;
-  }
-  @media (max-width: $mobileL) {
-    padding-top: 0;
-  } */
 
   .selection-feed {
     padding-top: 2rem;

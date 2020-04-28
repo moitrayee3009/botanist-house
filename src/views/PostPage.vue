@@ -1,9 +1,8 @@
 <template>
   <div class="page">
     <h1 class="entry-title">ARTICLES</h1>
-    <div class="content" v-html="content">
-      <Articles v-for="post in posts" :key="post.id" :post="post" />
-    </div>
+    <div class="content" v-html="content"></div>
+    <Articles />
   </div>
 </template>
 
@@ -16,13 +15,12 @@ export default {
   components: {
     Articles
   },
-  data () {
+  data() {
     return {
-      content: '...',
-      posts: [{}]
+      content: '...'
     }
   },
-  mounted () {
+  mounted() {
     this.content = getPageContent()
   }
 }

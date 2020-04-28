@@ -19,12 +19,12 @@ const routes = [
     name: 'PostPage',
     component: Articles
   },
-  // {
-  //   path: '/selection',
-  //   name: 'SelectionPage',
-  //   component: SelectionPage,
-  //   props: true
-  // },
+  {
+    path: '/selection',
+    name: 'SelectionPage',
+    component: SelectionPage,
+    props: true
+  },
 
   {
     path: '/:page',
