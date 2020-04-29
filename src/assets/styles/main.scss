@@ -12,7 +12,7 @@ html {
   margin-top: 0 !important;
 }
 .entry-title {
-  text-align: center;
+  // text-align: center;
   font-family: Freight;
   font-weight: $semiBold;
   color: $pageHeaderText;
@@ -74,7 +74,7 @@ article {
   z-index: 9999;
   display: block !important;
   width: 100%;
-  transition: height 0.01s ease-in-out;
+  transition: height 0.2s ease-in-out;
   ul.menu {
     width: 100%;
     height: 650px;
@@ -83,7 +83,7 @@ article {
     flex-flow: column nowrap;
     align-items: center !important;
     justify-content: flex-start;
-    text-align: center;
+    text-align: right;
     li {
       width: 100%;
       padding: 1rem;
@@ -127,6 +127,27 @@ input[type='submit']:focus {
 
 //single product page
 
-.product {
-  margin: 0 2rem;
+body.single-product {
+  .product_title {
+    text-align: left !important;
+    font-size: 1.5rem;
+    font-weight: $semiBold;
+  }
+  .price {
+    color: $priceText;
+    // margin: 0 !important;
+  }
+  .woocommerce-product-details__short-description {
+    padding-top: 0.5rem;
+  }
+  .entry-title {
+    text-align: center;
+  }
+  .product {
+    margin: 0 2rem;
+    padding: 0 2rem;
+    .woocommerce-product-gallery .woocommerce-product-gallery__trigger {
+      right: 2.5em !important;
+    }
+  }
 }
