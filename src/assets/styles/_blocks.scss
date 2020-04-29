@@ -8,3 +8,18 @@
     letter-spacing: 1 !important;
   }
 }
+//Single post
+.wp-block-group__inner-container p {
+  max-width: 70%;
+  text-align: left;
+  // font-weight: $semiBold;
+  font-size: $lg;
+  color: $productTitle;
+  letter-spacing: -0.64px;
+  margin: auto;
+  padding: 1rem;
+  box-sizing: border-box;
+  @media (max-width: $mobileL) {
+    max-width: 80% !important;
+  }
+}

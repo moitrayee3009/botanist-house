@@ -3,6 +3,7 @@ html {
 }
 @import 'variables';
 @import 'nav';
+@import 'blocks';
 
 .home .site-header {
   margin-bottom: 0 !important;
@@ -40,15 +41,13 @@ html {
 .hentry .entry-header {
   margin-bottom: 0 !important;
   border-bottom: transparent !important;
+  text-align: center;
 }
 .cat-links,
 .hentry .entry-taxonomy {
   display: none !important;
 }
 
-article {
-  margin-bottom: 0 !important;
-}
 #main {
   padding-top: 2rem;
   margin-bottom: 0;
@@ -151,3 +150,12 @@ body.single-product {
     }
   }
 }
+//Single post
+// article {
+//   margin-bottom: 0 !important;
+//   // background-color: $pageBackground !important;
+//   .entry-content {
+//     margin: 0 1rem;
+//     padding: 0 2rem;
+//   }
+// }

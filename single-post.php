@@ -1,13 +1,15 @@
 <?php
 /**
- * The template for displaying all single posts.
+ * 
+ * Template Name: Custom Post
+ * Template Post Type: post
  *
  * @package storefront
  */
 
 get_header(); ?>
 
-	<div id="primary" class="content-area">
+	<div id="primary" class="content-area content-area-bg-color">
 		<main id="main" class="site-main" role="main">
 
 		<?php
@@ -27,5 +29,5 @@ get_header(); ?>
 	</div><!-- #primary -->
 
 <?php
-do_action( 'storefront_sidebar' );
+//do_action( 'storefront_sidebar' );
 get_footer();

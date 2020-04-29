@@ -108,3 +108,18 @@ add_action( 'init', function() {
 add_action( 'init', function() {
     remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_meta', 40 );
 } );
+
+/**
+ * Remove post meta from single post page
+*/
+add_action( 'init', 'post_remove_meta' );
+function post_remove_meta() {
+    remove_action( 'storefront_post_header_before', 'storefront_post_meta', 10 );
+}
+
+/**
+ * Remove post nav from single post page bottom
+*/
+add_action( 'init', function() {
+    remove_action('storefront_single_post_bottom', 'storefront_post_nav', 10 );
+});
