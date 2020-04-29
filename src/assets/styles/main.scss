@@ -12,6 +12,7 @@ html {
   margin-top: 0 !important;
 }
 .entry-title {
+  text-align: center;
   font-family: Freight;
   font-weight: $semiBold;
   color: $pageHeaderText;
@@ -50,6 +51,7 @@ article {
 }
 #main {
   padding-top: 2rem;
+  margin-bottom: 0;
 }
 .site-content .col-full {
   max-width: 100%;

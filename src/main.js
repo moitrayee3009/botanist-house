@@ -4,6 +4,7 @@ import router from './router/index'
 import store from './store'
 import upperFirst from 'lodash/upperFirst'
 import camelCase from 'lodash/camelCase'
+import SelectionGrid from '@/components/SelectionGrid.vue'
 
 const requireComponent = require.context(
   './components',
@@ -22,6 +23,12 @@ requireComponent.keys().forEach((fileName) => {
 })
 
 Vue.config.productionTip = false
+
+new Vue({
+  router,
+  store,
+  render: (h) => h(SelectionGrid)
+}).$mount('#selectionGrid')
 
 new Vue({
   router,

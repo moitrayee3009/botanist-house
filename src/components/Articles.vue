@@ -14,11 +14,11 @@
 import axios from 'axios'
 
 export default {
-  mounted() {
+  mounted () {
     this.getPosts()
   },
 
-  data() {
+  data () {
     return {
       postsUrl: 'http://botanisthouse.local/wp-json/wp/v2/posts',
       posts: [],
@@ -28,7 +28,7 @@ export default {
     }
   },
   methods: {
-    getPosts() {
+    getPosts () {
       axios
         .get(this.postsUrl, { params: this.postsData })
         .then((response) => {

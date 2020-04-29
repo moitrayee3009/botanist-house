@@ -15,12 +15,12 @@ export default {
   components: {
     Articles
   },
-  data() {
+  data () {
     return {
       content: '...'
     }
   },
-  mounted() {
+  mounted () {
     this.content = getPageContent()
   }
 }

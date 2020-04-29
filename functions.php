@@ -91,3 +91,20 @@ function get_rest_featured_image( $object, $field_name, $request ) {
     }
     return false;
 }
+
+/**
+ * Remove related product from single product page
+*/
+
+add_action( 'init', function() {
+    remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_related_products', 20 );
+} );
+
+
+/**
+ * Remove category link from single product page
+*/
+
+add_action( 'init', function() {
+    remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_meta', 40 );
+} );
