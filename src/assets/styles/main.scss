@@ -1,9 +1,21 @@
+@font-face {
+  font-family: 'NeueHaasUnicaW1G-Regular';
+  src: url('//db.onlinewebfonts.com/t/31267e36af6f8dac65a56e78345e945e.ttf')
+    format('truetype');
+}
+@font-face {
+  font-family: 'Benguiat';
+  src: url('//db.onlinewebfonts.com/t/ef1bf50d9265228b632982bc37bc0171.ttf')
+    format('truetype');
+}
+
 html {
-  font-family: Freight, Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'Benguiat', 'NeueHaasUnicaW1G-Regular';
 }
 @import 'variables';
 @import 'nav';
 @import 'blocks';
+@import 'footer';
 
 .home .site-header {
   margin-bottom: 0 !important;
@@ -14,17 +26,16 @@ html {
 }
 .entry-title {
   // text-align: center;
-  font-family: Freight;
+  font-size: 1.5rem;
   font-weight: $semiBold;
   color: $pageHeaderText;
-  margin-top: -4.5%;
+  margin-top: -3.7%;
   @media (max-width: $tabletL) {
-    margin-top: -8%;
+    margin-top: -6%;
   }
 
   @media (max-width: $mobileL) {
-    margin-top: -14%;
-    font-size: 2rem;
+    margin-top: -12%;
   }
 }
 .page-selection {
@@ -36,6 +47,9 @@ html {
 
 .content-area-bg-color {
   background-color: $pageBackground !important;
+}
+.content-area {
+  margin-bottom: 0 !important;
 }
 
 .hentry .entry-header {
@@ -64,57 +78,11 @@ html {
   content: '\f07a' !important;
 }
 
-// handheld-navigation(mobile view)
-.handheld-navigation {
-  background-color: white;
-  position: absolute;
-  top: 90%;
-  right: 0;
-  z-index: 9999;
-  display: block !important;
-  width: 100%;
-  transition: height 0.2s ease-in-out;
-  ul.menu {
-    width: 100%;
-    height: 650px;
-    max-height: 9999px;
-    display: flex;
-    flex-flow: column nowrap;
-    align-items: center !important;
-    justify-content: flex-start;
-    text-align: right;
-    li {
-      width: 100%;
-      padding: 1rem;
-      font-size: $lg;
-    }
-  }
-}
-
-button.menu-toggle {
-  // border: none !important;
-  font-weight: $bolder;
-  font-size: 1rem;
-  padding: 0.125em 0.75em 0.125em 2.25em !important;
-}
-a:focus,
-.button:focus,
-.button.alt:focus,
-.button.added_to_cart:focus,
-.button.wc-forward:focus,
-button:focus,
-input[type='button']:focus,
-input[type='reset']:focus,
-input[type='submit']:focus {
-  outline: none !important;
-}
-
 //About text
 .about-text {
-  max-width: 60%;
+  max-width: 50%;
   text-align: left;
-  font-weight: $semiBold;
-  font-size: $lg;
+  font-size: $xl;
   color: $productTitle;
   letter-spacing: -0.64px;
   margin: auto;
@@ -150,12 +118,91 @@ body.single-product {
     }
   }
 }
-//Single post
-// article {
-//   margin-bottom: 0 !important;
-//   // background-color: $pageBackground !important;
-//   .entry-content {
-//     margin: 0 1rem;
-//     padding: 0 2rem;
-//   }
-// }
+
+// single-post
+
+.hentry .wp-post-image {
+  height: 30%;
+  width: 90%;
+  margin: auto;
+}
+.single-post-text {
+  max-width: 70%;
+  text-align: left;
+  // font-weight: $semiBold;
+  font-size: $lg;
+  color: $productTitle;
+  letter-spacing: -0.64px;
+  margin: auto;
+  padding: 1rem;
+  box-sizing: border-box;
+  @media (max-width: $mobileL) {
+    max-width: 80% !important;
+  }
+}
+
+//landing page
+.cover-author {
+  position: absolute;
+  bottom: 57%;
+  font-size: 1.4rem !important;
+  letter-spacing: 2.5px !important;
+  color: $pageBackground !important;
+  text-transform: uppercase;
+}
+.cover-text {
+  position: absolute;
+  bottom: 25%;
+  text-align: left;
+  text-transform: uppercase;
+  letter-spacing: 4pt;
+  font-weight: $bold;
+  color: $coverText;
+  line-height: 1.2;
+  font-size: 1.8rem;
+  @media (max-width: $mobileL) {
+    font-size: 0.8rem !important;
+    letter-spacing: 2pt !important;
+  }
+}
+
+.cover-button {
+  position: absolute;
+  bottom: 15%;
+  display: flex !important;
+  justify-content: flex-start !important;
+  margin-top: 2rem !important;
+  .wp-block-button__link {
+    text-align: center;
+    font-size: 0.75rem;
+    padding: 0.2rem 2.1rem;
+    background-color: $frontPageButton !important;
+    color: $pageBackground !important;
+    font-weight: $semiBold;
+    letter-spacing: 0.92;
+  }
+}
+
+.frontPage-link {
+  /* border: 1px solid #eeeeee; */
+  width: fit-content;
+  margin: 0 auto;
+  padding-bottom: 0.5rem;
+  a {
+    display: flex;
+    justify-content: center;
+    width: fit-content;
+    padding: 0.3rem 3rem;
+    text-align: center;
+    background-color: $frontPageButton;
+    color: $pageBackground;
+    font-weight: $semiBold;
+    font-size: 0.7rem;
+  }
+  :focus {
+    border: none;
+  }
+  /* :hover {
+      background-color: #eeeeee;
+    } */
+}

@@ -1,6 +1,6 @@
 <template>
   <div class="page">
-    <h1 class="entry-title">SELECTION</h1>
+    <h1 class="entry-title">SELECTION&nbsp;/&nbsp;ARCHIVE</h1>
     <div class="content" v-if="products.length > 0">
       <Selection
         v-for="product in products"
@@ -20,12 +20,12 @@ export default {
   components: {
     Selection
   },
-  data () {
+  data() {
     return {
       products: [{}]
     }
   },
-  mounted () {
+  mounted() {
     ProductServices.getProducts()
       .then((response) => {
         // Successful request
@@ -51,8 +51,6 @@ export default {
   justify-content: space-around;
   padding-top: 1rem;
   height: fit-content;
-  margin-left: auto;
-  margin-right: auto;
   @media (max-width: $mobileL) {
     flex-flow: column wrap;
   }

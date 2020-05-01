@@ -3,9 +3,9 @@
     <div class="home-content" v-html="content"></div>
     <div class="selection">
       <SelectionGrid class="selection-feed" />
-      <div class="check-selection">
+      <div class="frontPage-link">
         <router-link to="/selection" target="_blank">
-          Check Our Selection
+          SEE MORE
         </router-link>
       </div>
     </div>
@@ -49,33 +49,10 @@ export default {
   width: inherit;
   height: 50%;
   background-color: $pageBackground;
-  margin-top: 6rem;
   padding-bottom: 2rem;
 
   .selection-feed {
     padding-top: 2rem;
-  }
-  .check-selection {
-    border: 1px solid #eeeeee;
-    width: fit-content;
-    margin: 0 auto;
-    a {
-      display: flex;
-      justify-content: center;
-      width: fit-content;
-      padding: 0.3rem 2rem;
-      text-align: center;
-      background-color: transparent;
-      color: $pageHeaderText;
-      font-weight: $semiBold;
-      font-size: 1.5rem;
-    }
-    :focus {
-      border: none;
-    }
-    :hover {
-      background-color: #eeeeee;
-    }
   }
 }
 </style>

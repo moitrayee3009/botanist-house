@@ -9,7 +9,7 @@
   }
 }
 //Single post
-.wp-block-group__inner-container p {
+article .wp-block-group .wp-block-group__inner-container p {
   max-width: 70%;
   text-align: left;
   // font-weight: $semiBold;

@@ -3,14 +3,13 @@
 //  Run 'build-watch' from the 'NPM SCRIPTS - dropdown'
 @import 'variables';
 .site-header {
-  font-family: Arial;
   display: flex;
   flex: 1;
   justify-content: space-between;
   align-items: flex-end;
   padding-bottom: 1rem !important;
   border-bottom-width: 0px !important;
-  margin-bottom: 5rem !important;
+  margin-bottom: 2rem !important;
   margin-left: auto;
   margin-right: auto;
   height: 6rem;
@@ -50,11 +49,13 @@
       outline: none;
     }
     .site-title a {
+      font-family: 'Benguiat';
       display: flex;
       align-items: flex-start;
       flex-flow: row nowrap;
+      color: $siteHeaderText;
       font-size: 1rem;
-      font-weight: $bolder;
+      font-weight: $bold;
       padding: 0 !important;
       text-transform: uppercase;
     }
@@ -70,6 +71,7 @@
 
     li a {
       padding: 0 1rem !important;
+      color: $siteHeaderText;
       font-size: 1rem;
       .cart-contents {
         height: 1rem !important;
@@ -133,4 +135,49 @@
       font-size: 0.8rem !important;
     }
   }
+}
+
+// handheld-navigation(mobile view)
+.handheld-navigation {
+  background-color: white;
+  position: absolute;
+  top: 90%;
+  right: 0;
+  z-index: 9999;
+  display: block !important;
+  width: 100%;
+  transition: height 0.2s ease-in-out;
+  ul.menu {
+    width: 100%;
+    height: 650px;
+    max-height: 9999px;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center !important;
+    justify-content: flex-start;
+    text-align: right;
+    li {
+      width: 100%;
+      padding: 1rem;
+      font-size: $lg;
+    }
+  }
+}
+
+button.menu-toggle {
+  // border: none !important;
+  font-weight: $bolder;
+  font-size: 1rem;
+  padding: 0.125em 0.75em 0.125em 2.25em !important;
+}
+a:focus,
+.button:focus,
+.button.alt:focus,
+.button.added_to_cart:focus,
+.button.wc-forward:focus,
+button:focus,
+input[type='button']:focus,
+input[type='reset']:focus,
+input[type='submit']:focus {
+  outline: none !important;
 }

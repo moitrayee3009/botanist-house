@@ -123,3 +123,40 @@ function post_remove_meta() {
 add_action( 'init', function() {
     remove_action('storefront_single_post_bottom', 'storefront_post_nav', 10 );
 });
+
+/**
+ * Remove add_to_cart_message
+*/
+// add_filter( 'wc_add_to_cart_message_html', '__return_false' );
+
+/**
+ * Changes the redirect URL for the Return To Shop button in the cart.
+*
+* @return string
+*/
+function wc_empty_cart_redirect_url() {
+	return 'http://botanisthouse.local/selection/';
+}
+add_filter( 'woocommerce_return_to_shop_redirect', 'wc_empty_cart_redirect_url' );
+
+/**
+ * Changes the text for the Return To Shop button in the cart.
+*/
+add_filter( 'gettext', 'change_woocommerce_return_to_shop_text', 20, 3 );
+function change_woocommerce_return_to_shop_text( $translated_text, $text, $domain ) {
+       switch ( $translated_text ) {
+                      case 'Return to shop' :
+   $translated_text = __( 'Return to Selection', 'woocommerce' );
+   break;
+  }
+ return $translated_text; 
+
+}
+
+/**
+ * Remove storefront credit and widget.
+*/
+add_action('init', function() {
+    remove_action( 'storefront_footer', 'storefront_credit', 20 );
+    remove_action( 'storefront_footer', 'storefront_footer_widgets', 10 );
+});

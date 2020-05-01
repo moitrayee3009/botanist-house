@@ -5,8 +5,8 @@
         <div class="image" v-if="product.images">
           <img :src="product.images[0].src" />
         </div>
-        <h4 class="name">{{ product.name }}</h4>
-        <p class="price">€{{ product.price }}.00</p>
+        <!-- <h4 class="name">{{ product.name }}</h4>
+        <p class="price">€{{ product.price }}.00</p> -->
       </div>
     </a>
   </div>
@@ -24,6 +24,7 @@ export default {
 @import '@/assets/styles/_variables.scss';
 .container {
   display: flex;
+  justify-content: center;
   flex: 1;
   box-sizing: border-box;
   .product {
@@ -31,7 +32,7 @@ export default {
     text-align: left;
     width: fit-content;
     height: auto;
-    padding: 1rem;
+    padding: 2rem;
     box-sizing: border-box;
 
     .image {

@@ -24,14 +24,18 @@ requireComponent.keys().forEach((fileName) => {
 
 Vue.config.productionTip = false
 
-new Vue({
-  router,
-  store,
-  render: (h) => h(SelectionGrid)
-}).$mount('#selectionGrid')
+if (document.getElementById('selectionGrid')) {
+  new Vue({
+    router,
+    store,
+    render: (h) => h(SelectionGrid)
+  }).$mount('#selectionGrid')
+}
 
-new Vue({
-  router,
-  store,
-  render: (h) => h(App)
-}).$mount('#app')
+if (document.getElementById('app')) {
+  new Vue({
+    router,
+    store,
+    render: (h) => h(App)
+  }).$mount('#app')
+}

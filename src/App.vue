@@ -36,9 +36,9 @@ export default {}
     }
   }
 }
-.entry-content {
+/* .entry-content {
   margin-bottom: 2rem !important;
-}
+} */
 .wp-block-cover .wp-block-cover__inner-container {
   width: calc(100% - 70px);
   z-index: 1;
