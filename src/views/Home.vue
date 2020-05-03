@@ -22,12 +22,12 @@ export default {
   components: {
     SelectionGrid
   },
-  data() {
+  data () {
     return {
       content: '...'
     }
   },
-  mounted() {
+  mounted () {
     this.content = getPageContent()
   }
 }

@@ -100,6 +100,7 @@
   }
 
   .storefront-primary-navigation .site-header-cart .cart-contents:after {
+    display: none;
     background-image: url(assets/noun_cart_1832886.svg);
     content: '';
     height: 1.5em !important;
@@ -108,6 +109,17 @@
   }
 }
 
+.bc-mnc .bc-mnc__cart-link {
+  text-indent: 0;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  align-self: center;
+  justify-content: flex-end;
+  i.icon-cart-01.bc-menu-cart-icon {
+    color: $siteHeaderText !important;
+  }
+}
 //widget_shopping_cart list style
 .site-header-cart .widget_shopping_cart div.widget_shopping_cart_content {
   display: none;

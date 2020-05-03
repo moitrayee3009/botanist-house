@@ -51,12 +51,46 @@ html {
 .content-area {
   margin-bottom: 0 !important;
 }
-
 .hentry .entry-header {
-  margin-bottom: 0 !important;
-  border-bottom: transparent !important;
-  text-align: center;
+  border-bottom: none !important;
 }
+.single-post .hentry .entry-header .custom-single-post-title {
+  width: 70%;
+  margin-bottom: 0 !important;
+  text-align: left !important;
+  padding: 0.5rem 4rem;
+  text-transform: uppercase !important;
+  font-size: 1.8rem;
+  color: black !important;
+  font-weight: $bold;
+  letter-spacing: 3.1px;
+}
+
+.single-post .hentry .entry-header .posted-on {
+  color: $siteHeaderText;
+  font-weight: $semiBold;
+  a {
+    text-decoration: none !important;
+    cursor: none !important;
+    color: $siteHeaderText;
+    padding: 0 4rem !important;
+    text-transform: uppercase !important;
+  }
+}
+
+@media (max-width: $mobileL) {
+  .custom-single-post-title {
+    width: 80% !important;
+    font-size: 1rem !important;
+    padding: 0.5rem 2rem !important;
+  }
+  .single-post .hentry .entry-header .posted-on {
+    a {
+      padding: 0 2rem !important;
+    }
+  }
+}
+
 .cat-links,
 .hentry .entry-taxonomy {
   display: none !important;
@@ -65,6 +99,11 @@ html {
 #main {
   padding-top: 2rem;
   margin-bottom: 0;
+  @media (max-width: $mobileL) {
+    // padding-top: 0 !important;
+    padding-bottom: 2rem !important;
+    // margin-bottom: 2rem !important;
+  }
 }
 .site-content .col-full {
   max-width: 100%;
@@ -94,27 +133,20 @@ html {
 
 //single product page
 
-body.single-product {
-  .product_title {
-    text-align: left !important;
-    font-size: 1.5rem;
-    font-weight: $semiBold;
-  }
+.single-product {
   .price {
     color: $priceText;
     // margin: 0 !important;
   }
-  .woocommerce-product-details__short-description {
-    padding-top: 0.5rem;
-  }
+
   .entry-title {
     text-align: center;
   }
   .product {
-    margin: 0 2rem;
+    margin: 0 3rem;
     padding: 0 2rem;
-    .woocommerce-product-gallery .woocommerce-product-gallery__trigger {
-      right: 2.5em !important;
+    @media (max-width: $mobileL) {
+      padding: 0 2rem 2rem 2rem !important;
     }
   }
 }
@@ -122,19 +154,37 @@ body.single-product {
 // single-post
 
 .hentry .wp-post-image {
-  height: 30%;
+  height: 20% !important;
   width: 90%;
   margin: auto;
+  @media (max-width: $mobileL) {
+    width: 80%;
+  }
 }
+
+.content-right {
+  text-align: left;
+  padding: 0 4rem;
+  font-size: $lg;
+  color: $productTitle;
+  letter-spacing: -0.64px;
+  box-sizing: border-box;
+  @media (max-width: $mobileL) {
+    padding-right: 0 !important;
+  }
+}
+
 .single-post-text {
-  max-width: 70%;
+  display: flex;
+  justify-content: flex-end;
+  max-width: 100%;
   text-align: left;
   // font-weight: $semiBold;
   font-size: $lg;
   color: $productTitle;
   letter-spacing: -0.64px;
-  margin: auto;
-  padding: 1rem;
+  margin-right: 0;
+  padding: 2rem;
   box-sizing: border-box;
   @media (max-width: $mobileL) {
     max-width: 80% !important;
@@ -145,23 +195,29 @@ body.single-product {
 .cover-author {
   position: absolute;
   bottom: 57%;
-  font-size: 1.4rem !important;
+  font-size: 1rem !important;
   letter-spacing: 2.5px !important;
   color: $pageBackground !important;
   text-transform: uppercase;
+  @media (max-width: $mobileL) {
+    bottom: 53%;
+    font-size: 0.8rem !important;
+    letter-spacing: 1pt !important;
+  }
 }
 .cover-text {
   position: absolute;
-  bottom: 25%;
+  bottom: 25% !important;
   text-align: left;
   text-transform: uppercase;
   letter-spacing: 4pt;
   font-weight: $bold;
   color: $coverText;
   line-height: 1.2;
-  font-size: 1.8rem;
+  font-size: 2.875rem !important;
   @media (max-width: $mobileL) {
-    font-size: 0.8rem !important;
+    bottom: 23%;
+    font-size: 1.5rem !important;
     letter-spacing: 2pt !important;
   }
 }
@@ -180,6 +236,10 @@ body.single-product {
     color: $pageBackground !important;
     font-weight: $semiBold;
     letter-spacing: 0.92;
+    @media (max-width: $mobileL) {
+      font-size: 0.4rem !important;
+      letter-spacing: 0.5 !important;
+    }
   }
 }
 

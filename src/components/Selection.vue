@@ -23,13 +23,13 @@ export default {
 <style lang="scss" scoped>
 @import '@/assets/styles/_variables.scss';
 .container {
+  min-width: 33.33% !important;
   display: flex;
   justify-content: center;
   flex: 1;
   box-sizing: border-box;
   .product {
     flex-flow: column wrap;
-    text-align: left;
     width: fit-content;
     height: auto;
     padding: 2rem;

@@ -20,12 +20,12 @@ export default {
   components: {
     Selection
   },
-  data() {
+  data () {
     return {
       products: [{}]
     }
   },
-  mounted() {
+  mounted () {
     ProductServices.getProducts()
       .then((response) => {
         // Successful request
@@ -48,6 +48,7 @@ export default {
 
 .content {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
   padding-top: 1rem;
   height: fit-content;

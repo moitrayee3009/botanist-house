@@ -112,10 +112,10 @@ add_action( 'init', function() {
 /**
  * Remove post meta from single post page
 */
-add_action( 'init', 'post_remove_meta' );
-function post_remove_meta() {
-    remove_action( 'storefront_post_header_before', 'storefront_post_meta', 10 );
-}
+// add_action( 'init', 'post_remove_meta' );
+// function post_remove_meta() {
+//     remove_action( 'storefront_post_header_before', 'storefront_post_meta', 10 );
+// }
 
 /**
  * Remove post nav from single post page bottom
@@ -160,3 +160,131 @@ add_action('init', function() {
     remove_action( 'storefront_footer', 'storefront_credit', 20 );
     remove_action( 'storefront_footer', 'storefront_footer_widgets', 10 );
 });
+
+/**
+ * Remove storefront_handheld_footer_bar .
+*/
+add_action( 'init', 'jk_remove_storefront_handheld_footer_bar' );
+
+function jk_remove_storefront_handheld_footer_bar() {
+  remove_action( 'storefront_footer', 'storefront_handheld_footer_bar', 999 );
+}
+
+//author meta
+
+ function slug_show_author_meta( $object ) {
+       $post_author = (int) $object['author'];
+        $array_data = array();
+
+        // $array_data['login'] = get_the_author_meta('login');
+
+        // $array_data['email'] = get_the_author_meta('email');
+
+        //$array_data['user_nicename'] = get_the_author_meta('user_nicename');
+
+        $array_data['first_name'] = get_user_meta($post_author, 'first_name', true);
+
+        $array_data['last_name'] = get_user_meta($post_author, 'last_name', true);
+
+        //$array_data['nickname'] = get_user_meta($post_author, 'nickname', true);
+
+        return array_filter($array_data);
+    }
+
+    function slug_show_register_author_meta_rest_field() {
+
+    register_rest_field('post', 'author_meta', array(
+        'get_callback'    => 'slug_show_author_meta',
+        'update_callback' => null,
+        'schema'          => null,
+    ));
+
+}
+add_action('rest_api_init', 'slug_show_register_author_meta_rest_field');
+
+/**
+ * Remove storefront header_cart.
+*/
+
+function remove_sf_actions() {
+	remove_action( 'storefront_header', 'storefront_header_cart', 60 );
+}
+add_action( 'init', 'remove_sf_actions' );
+
+/**
+ * Remove storefront quantity_fields.
+*/
+
+add_filter( 'woocommerce_is_sold_individually', '__return_true' );
+
+/**
+ * remove_description_tab.
+*/
+add_filter( 'woocommerce_product_tabs', 'yikes_remove_description_tab', 20, 1 );
+
+function yikes_remove_description_tab( $tabs ) {
+
+	// Remove the description tab
+    if ( isset( $tabs['description'] ) ) unset( $tabs['description'] );      	    
+    return $tabs;
+}
+
+/**
+ *Remove Zoom, Gallery @ Single Product Page
+ * 
+ */
+  
+add_action( 'wp', 'bbloomer_remove_zoom_lightbox_theme_support', 99 );
+  
+function bbloomer_remove_zoom_lightbox_theme_support() { 
+   remove_theme_support( 'wc-product-gallery-zoom' );
+   remove_theme_support( 'wc-product-gallery-lightbox' );
+   remove_theme_support( 'wc-product-gallery-slider' );
+}
+
+/**
+ *woo_custom_cart_button_text
+ * 
+ */
+add_filter('woocommerce_product_single_add_to_cart_text', 'woo_custom_cart_button_text');
+ 
+function woo_custom_cart_button_text() {
+return __('purchase', 'woocommerce');
+}
+
+/**
+ * Product Summary Box.
+ *
+ * @see woocommerce_template_single_title()
+ * @see woocommerce_template_single_rating()
+ * @see woocommerce_template_single_price()
+ * @see woocommerce_template_single_excerpt()
+ * @see woocommerce_template_single_meta()
+ * @see woocommerce_template_single_sharing()
+ */
+add_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_title', 5 );
+add_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_rating', 10 );
+add_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_excerpt', 20 );
+add_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_meta', 40 );
+add_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_price', 20 );
+add_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_sharing', 50 );
+
+add_action('init', function() {
+    remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_price', 10 );
+   
+});
+
+/**
+ * remove billing country
+ */
+function custom_override_checkout_fields( $fields ) {
+    unset($fields['billing']['billing_country']);
+    return $fields;
+}
+
+add_filter('woocommerce_checkout_fields','custom_override_checkout_fields');
+
+/**
+ * Removing 'posted on' text from post meta
+ */
+require get_stylesheet_directory() . '/inc/storefront-template-functions.php';

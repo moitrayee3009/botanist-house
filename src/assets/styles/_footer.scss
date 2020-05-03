@@ -1,8 +1,8 @@
 @import 'variables';
 
 footer {
-  height: 40vh;
-
+  height: 35vh;
+  color: $pageBackground;
   .col-full {
     max-width: 100% !important;
     padding: 2rem !important;
@@ -16,14 +16,17 @@ footer {
 }
 .f-header {
   font-family: 'Benguiat';
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   text-transform: uppercase;
+  @media (max-width: $mobileL) {
+    font-size: 1rem !important;
+  }
 }
 
 .f-details {
   text-transform: uppercase;
   margin-top: 1rem;
-  font-size: 0.7rem;
+  font-size: 0.6rem;
   font-family: 'NeueHaasUnicaW1G-Regular' !important;
   span {
     padding-right: 0.5rem;
