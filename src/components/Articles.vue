@@ -1,37 +1,47 @@
 <template>
   <div>
     <h1 class="entry-title">ARTICLES</h1>
+    <div v-if="posts.length > 0">
+      <div
+        class="post"
+        v-for="post in posts"
+        :key="post.id"
+        :style="{ backgroundImage: `url(${post.jetpack_featured_media_url})` }"
+      >
+        <!--  :style="{ backgroundImage: `url(${post.fimg_url})` }"-->
 
-    <div
-      class="post"
-      v-for="post in posts"
-      :key="post.id"
-      :style="{ backgroundImage: `url(${post.fimg_url})` }"
-    >
-      <div class="details">
-        <p class="author-name">
-          <span>{{ post.author_meta.first_name }}</span>
-          <span>{{ post.author_meta.last_name }}</span>
-        </p>
-        <p class="post-title">{{ post.title.rendered }}</p>
-        <a :href="post.slug" class="link">
-          <!-- <img :src="post.fimg_url" /> -->
-          Read article
-        </a>
+        <div class="details">
+          <p class="author-name">
+            <span>{{ post.author_meta.first_name }}</span>
+            <span>{{ post.author_meta.last_name }}</span>
+          </p>
+          <p class="post-title">{{ post.title.rendered }}</p>
+          <a :href="post.slug" class="link" target="_blank">
+            <!-- <img :src="post.fimg_url" /> -->
+            Read article
+          </a>
+        </div>
       </div>
+    </div>
+    <div class="spin" v-else>
+      <Spinner line-fg-color="#8e140a"></Spinner>
     </div>
   </div>
 </template>
 
 <script>
 import axios from 'axios'
+import Spinner from 'vue-simple-spinner'
 
 export default {
-  mounted() {
+  components: {
+    Spinner
+  },
+  mounted () {
     this.getPosts()
   },
 
-  data() {
+  data () {
     return {
       postsUrl: 'http://botanisthouse.local/wp-json/wp/v2/posts',
       posts: [],
@@ -41,7 +51,7 @@ export default {
     }
   },
   methods: {
-    getPosts() {
+    getPosts () {
       axios
         .get(this.postsUrl, { params: this.postsData })
         .then((response) => {

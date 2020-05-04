@@ -8,21 +8,27 @@
         :product="product"
       />
     </div>
+    <div class="spin" v-else>
+      <Spinner line-fg-color="#8e140a"></Spinner>
+    </div>
   </div>
 </template>
 
 <script>
 import Selection from '@/components/Selection.vue'
 import ProductServices from '@/services/ProductServices.js'
+import Spinner from 'vue-simple-spinner'
 
 export default {
   name: 'SelectionGrid',
+
   components: {
+    Spinner,
     Selection
   },
   data () {
     return {
-      products: [{}]
+      products: []
     }
   },
   mounted () {
