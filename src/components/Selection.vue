@@ -45,7 +45,7 @@ export default {
       font-size: 1rem;
     }
     .price {
-      color: $priceText;
+      color: $pageHeaderText;
       text-align: left;
       font-size: $xxl;
       margin-top: 0;

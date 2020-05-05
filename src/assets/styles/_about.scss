@@ -1,0 +1,12 @@
+.about-text {
+  max-width: 50%;
+  text-align: left;
+  font-size: $lg;
+  color: $productTitle;
+  letter-spacing: -0.64px;
+  margin: auto;
+  padding: 1rem;
+  @media (max-width: $mobileL) {
+    max-width: 80%;
+  }
+}

@@ -1,0 +1,103 @@
+.single-product {
+  .price {
+    color: $pageHeaderText;
+    // margin: 0 !important;
+  }
+
+  .entry-title {
+    text-align: center;
+  }
+  .product {
+    margin: 0 3rem;
+    padding: 0 2rem;
+    @media (max-width: $mobileL) {
+      padding: 0 2rem 2rem 2rem !important;
+    }
+  }
+}
+.single-product div.product .woocommerce-product-gallery img {
+  margin-bottom: 1rem !important;
+  width: 100%;
+  /* cursor: none; */
+}
+
+.single-product div.product .summary,
+form.cart {
+  margin-bottom: 0 !important;
+}
+button[name='add-to-cart'] {
+  display: flex;
+  justify-content: center;
+  width: fit-content;
+  padding: 0.3rem 2.6rem;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: normal;
+  font-size: 0.7rem;
+}
+
+.inquire {
+  display: flex;
+  justify-content: center;
+  width: fit-content;
+  padding: 0.3rem 2.9rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  text-transform: uppercase;
+  background-color: #9978d8;
+  color: #ffefdb;
+  font-weight: normal;
+  font-size: 0.7rem;
+}
+.price {
+  font-weight: bold !important;
+  font-size: 1rem !important;
+  margin-bottom: 0 !important;
+}
+.woocommerce-Price-currencySymbol {
+  padding-right: 1rem !important;
+}
+
+div.edit-link {
+  display: none !important;
+}
+.dimension {
+  margin-bottom: 0 !important;
+}
+.product_title {
+  margin-bottom: 0 !important;
+  text-align: left !important;
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: 3.8px !important;
+  text-transform: uppercase !important;
+}
+/* .woocommerce-product-details__short-description {
+  
+} */
+.woocommerce-product-details__short-description p {
+  color: #000000 !important;
+  font-size: 1rem !important;
+}
+
+.woocommerce-product-details__short-description h5 {
+  display: flex;
+  flex: 1;
+  text-align: left;
+  color: #544276;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.single_add_to_cart_button,
+.checkout-button,
+.button {
+  background-color: #8e140a !important;
+  color: #ffefdb;
+}
+
+.single-product .content-area,
+.woocommerce-cart div#primary.content-area {
+  background-color: #ffefdb !important;
+}

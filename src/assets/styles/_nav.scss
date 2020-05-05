@@ -2,6 +2,13 @@
 //  To check these style while editing:
 //  Run 'build-watch' from the 'NPM SCRIPTS - dropdown'
 @import 'variables';
+.main-navigation ul li a:hover,
+.main-navigation ul li:hover > a,
+.site-title a:hover,
+.site-header ul.menu li.current-menu-item > a {
+  color: $siteHeaderText !important;
+  font-weight: bold !important;
+}
 .site-header {
   display: flex;
   flex: 1;

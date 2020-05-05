@@ -379,9 +379,9 @@ if ( ! function_exists( 'storefront_post_header' ) ) {
 		 * @hooked storefront_post_meta - 10
 		 */
 		do_action( 'storefront_post_header_before' );
-
+		
 		if ( is_single() ) {
-			the_title( '<h2 class="custom-single-post-title">', '</h2>' );
+			the_title( '<h2 class="custom-single-post-title">', '</h2>' );// Change the single post header to h2 tag instead of h1
 		// } else {
 		// 	the_title( sprintf( '<h2 class="alpha entry-title"><a href="%s" //rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' );
 		 }
@@ -467,7 +467,7 @@ if ( ! function_exists( 'storefront_post_meta' ) ) {
 			sprintf( __( '%s', 'storefront' ), $output_time_string ) .
 			'</span>';
 
-		// Author.
+		// Author. removed
 		
 
 		// Comments.

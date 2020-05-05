@@ -1,0 +1,91 @@
+.single-post .hentry .entry-header .custom-single-post-title {
+  width: 70%;
+  margin-bottom: 0 !important;
+  text-align: left !important;
+  padding: 0.5rem 4rem;
+  text-transform: uppercase !important;
+  font-size: 1.8rem;
+  color: black !important;
+  font-weight: $bold;
+  letter-spacing: 3.1px;
+}
+
+.single-post .hentry .entry-header .posted-on {
+  color: $siteHeaderText;
+  font-weight: $semiBold;
+  a {
+    text-decoration: none !important;
+    cursor: none !important;
+    color: $siteHeaderText;
+    padding: 0 4rem !important;
+    text-transform: uppercase !important;
+  }
+}
+
+@media (max-width: $mobileL) {
+  .custom-single-post-title {
+    width: 80% !important;
+    font-size: 1rem !important;
+    padding: 0.5rem 2rem !important;
+  }
+  .single-post .hentry .entry-header .posted-on {
+    a {
+      padding: 0 2rem !important;
+    }
+  }
+}
+
+.cat-links,
+.hentry .entry-taxonomy {
+  display: none !important;
+}
+
+.wp-block-image img {
+  background-size: cover;
+  height: 430px !important;
+  max-width: 90% !important;
+  margin: auto;
+  @media (max-width: $mobileL) {
+    width: 80%;
+  }
+}
+.hentry .wp-post-image {
+  background-size: cover;
+  height: 430px !important;
+  width: 90%;
+  margin: auto;
+  @media (max-width: $mobileL) {
+    width: 80%;
+  }
+}
+
+.content-right {
+  display: flex;
+  justify-content: flex-end;
+  text-align: left;
+  padding: 0 4rem;
+  font-size: $lg;
+  color: $productTitle;
+  letter-spacing: -0.64px;
+  box-sizing: border-box;
+  @media (max-width: $mobileL) {
+    padding-right: 0 !important;
+  }
+}
+
+.single-post-text {
+  display: flex;
+  justify-content: flex-end;
+  max-width: 100%;
+  text-align: left;
+  // font-weight: $semiBold;
+  font-size: $lg;
+  color: $productTitle;
+  letter-spacing: -0.64px;
+  margin-right: 0;
+  padding: 2rem;
+  box-sizing: border-box;
+  @media (max-width: $mobileL) {
+    max-width: 80% !important;
+  }
+}
