@@ -185,10 +185,19 @@
 
 button.menu-toggle {
   // border: none !important;
+  border-color: $siteHeaderText !important;
+  color: $siteHeaderText !important;
   font-weight: $bolder;
   font-size: 1rem;
   padding: 0.125em 0.75em 0.125em 2.25em !important;
 }
+
+button.menu-toggle:after,
+button.menu-toggle:before,
+button.menu-toggle span:before {
+  background-color: $siteHeaderText !important;
+}
+
 a:focus,
 .button:focus,
 .button.alt:focus,

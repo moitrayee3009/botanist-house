@@ -11,7 +11,10 @@
     margin: 0 3rem;
     padding: 0 2rem;
     @media (max-width: $mobileL) {
+      margin: 0 !important;
       padding: 0 2rem 2rem 2rem !important;
+      display: flex;
+      flex-direction: column-reverse;
     }
   }
 }
@@ -36,7 +39,8 @@ button[name='add-to-cart'] {
   font-size: 0.7rem;
 }
 
-.inquire {
+.inquire,
+.inquire-mobile {
   display: flex;
   justify-content: center;
   width: fit-content;
@@ -44,10 +48,22 @@ button[name='add-to-cart'] {
   margin-bottom: 2rem;
   text-align: center;
   text-transform: uppercase;
-  background-color: #9978d8;
-  color: #ffefdb;
+  background-color: $frontPageButton;
+  color: $pageBackground;
   font-weight: normal;
   font-size: 0.7rem;
+}
+@media (max-width: $mobileL) {
+  .inquire {
+    display: none !important;
+  }
+  .inquire-mobile {
+    display: flex !important;
+    flex-direction: column-reverse;
+  }
+}
+.inquire-mobile {
+  display: none;
 }
 .price {
   font-weight: bold !important;
@@ -84,7 +100,7 @@ div.edit-link {
   display: flex;
   flex: 1;
   text-align: left;
-  color: #544276;
+  color: $siteHeaderText;
   text-transform: uppercase;
   font-size: 0.8rem;
   font-weight: 500;
@@ -93,11 +109,11 @@ div.edit-link {
 .single_add_to_cart_button,
 .checkout-button,
 .button {
-  background-color: #8e140a !important;
-  color: #ffefdb;
+  background-color: $pageHeaderText !important;
+  color: $pageBackground !important;
 }
 
 .single-product .content-area,
 .woocommerce-cart div#primary.content-area {
-  background-color: #ffefdb !important;
+  background-color: $pageBackground !important;
 }

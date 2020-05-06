@@ -2,7 +2,7 @@
   width: 70%;
   margin-bottom: 0 !important;
   text-align: left !important;
-  padding: 0.5rem 4rem;
+  padding: 3rem 6rem 0.5rem;
   text-transform: uppercase !important;
   font-size: 1.8rem;
   color: black !important;
@@ -17,7 +17,7 @@
     text-decoration: none !important;
     cursor: none !important;
     color: $siteHeaderText;
-    padding: 0 4rem !important;
+    padding: 0 6rem !important;
     text-transform: uppercase !important;
   }
 }
@@ -51,25 +51,30 @@
 }
 .hentry .wp-post-image {
   background-size: cover;
-  height: 430px !important;
-  width: 90%;
+  height: auto !important;
+  width: 85%;
   margin: auto;
   @media (max-width: $mobileL) {
     width: 80%;
   }
 }
 
-.content-right {
+.right-text {
+  width: 100%;
   display: flex;
   justify-content: flex-end;
+}
+
+.content-right {
   text-align: left;
-  padding: 0 4rem;
-  font-size: $lg;
+  padding: 1rem 7rem 1rem 0;
+  // font-size: $sm;
   color: $productTitle;
   letter-spacing: -0.64px;
   box-sizing: border-box;
   @media (max-width: $mobileL) {
-    padding-right: 0 !important;
+    padding: 2rem !important;
+    width: 100%;
   }
 }
 
@@ -88,4 +93,18 @@
   @media (max-width: $mobileL) {
     max-width: 80% !important;
   }
+}
+.wp-block-cover,
+.wp-block-cover-image {
+  position: relative;
+  background-color: transparent;
+  background-size: cover;
+  background-position: bottom;
+  min-height: 430px;
+  height: auto;
+  width: 85%;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  overflow: hidden;
 }
