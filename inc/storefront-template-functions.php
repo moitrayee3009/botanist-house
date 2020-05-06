@@ -372,6 +372,11 @@ if ( ! function_exists( 'storefront_post_header' ) ) {
 		?>
 		<header class="entry-header">
 		<?php
+		if ( is_single() ) {
+			the_title( '<h2 class="custom-single-post-title">', '</h2>' );// Change the single post header to h2 tag instead of h1
+		// } else {
+		// 	the_title( sprintf( '<h2 class="alpha entry-title"><a href="%s" //rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' );
+		 }
 
 		/**
 		 * Functions hooked in to storefront_post_header_before action.
@@ -380,12 +385,7 @@ if ( ! function_exists( 'storefront_post_header' ) ) {
 		 */
 		do_action( 'storefront_post_header_before' );
 		
-		if ( is_single() ) {
-			the_title( '<h2 class="custom-single-post-title">', '</h2>' );// Change the single post header to h2 tag instead of h1
-		// } else {
-		// 	the_title( sprintf( '<h2 class="alpha entry-title"><a href="%s" //rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' );
-		 }
-
+		
 		do_action( 'storefront_post_header_after' );
 		?>
 		</header><!-- .entry-header -->
