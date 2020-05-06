@@ -36,7 +36,7 @@ export default {
       .then((response) => {
         // Successful request
         this.products = response.data
-        // console.log('Response Data:', response.data)
+        console.log('Response Data:', response.data)
       })
       .catch((error) => {
         // Invalid request, for 4xx and 5xx statuses
