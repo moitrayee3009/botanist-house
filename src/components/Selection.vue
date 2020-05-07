@@ -51,5 +51,9 @@ export default {
       margin-top: 0;
     }
   }
+  @media (max-width: $mobileL) {
+    min-width: 100% !important;
+    justify-content: flex-start !important;
+  }
 }
 </style>

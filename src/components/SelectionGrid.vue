@@ -26,12 +26,12 @@ export default {
     Spinner,
     Selection
   },
-  data () {
+  data() {
     return {
       products: []
     }
   },
-  mounted () {
+  mounted() {
     ProductServices.getProducts()
       .then((response) => {
         // Successful request
@@ -55,11 +55,14 @@ export default {
 .content {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: flex-start;
   padding-top: 1rem;
   height: fit-content;
   @media (max-width: $mobileL) {
-    flex-flow: column wrap;
+    flex-flow: row nowrap;
+    overflow: scroll;
+    width: 100%;
+    height: auto;
   }
 }
 </style>

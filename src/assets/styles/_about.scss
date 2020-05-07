@@ -1,11 +1,16 @@
+.text-container {
+  width: 100%;
+  padding: 4rem;
+}
 .about-text {
-  max-width: 50%;
+  font-family: 'NeueHaasUnicaW1G-Regular';
+  max-width: 40%;
   text-align: left;
-  font-size: $lg;
+  font-size: 0.9rem;
+  // font-weight: $semiBold;
   color: $productTitle;
-  letter-spacing: -0.64px;
   margin: auto;
-  padding: 1rem;
+  padding: 0 0 2rem 0;
   @media (max-width: $mobileL) {
     max-width: 80%;
   }
