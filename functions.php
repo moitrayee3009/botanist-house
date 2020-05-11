@@ -135,7 +135,7 @@ add_action( 'init', function() {
 * @return string
 */
 function wc_empty_cart_redirect_url() {
-	return 'http://botanisthouse.local/selection/';
+	return get_site_url().'/selection/';
 }
 add_filter( 'woocommerce_return_to_shop_redirect', 'wc_empty_cart_redirect_url' );
 

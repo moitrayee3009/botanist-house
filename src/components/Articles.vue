@@ -38,11 +38,11 @@ export default {
   components: {
     Spinner
   },
-  mounted() {
+  mounted () {
     this.getPosts()
   },
 
-  data() {
+  data () {
     return {
       postsUrl: config.staging.URL + 'wp-json/wp/v2/posts',
       posts: [],
@@ -52,7 +52,7 @@ export default {
     }
   },
   methods: {
-    getPosts() {
+    getPosts () {
       axios
         .get(this.postsUrl, { params: this.postsData })
         .then((response) => {
