@@ -102,9 +102,14 @@
   background-position: bottom;
   min-height: 430px;
   height: auto;
-  // width: 85%;
   display: flex;
   justify-content: center;
   margin: auto;
   overflow: hidden;
+}
+
+.single-post .wp-block-cover {
+  width: 80% !important;
+  margin: auto;
+  background-size: cover;
 }
