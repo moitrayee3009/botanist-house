@@ -6,11 +6,16 @@ footer {
   .col-full {
     max-width: 100% !important;
     padding: 2rem !important;
+
     @media (max-width: $mobileL) {
+      margin-left: 2em;
       padding: 2rem 0 !important;
     }
     @media (max-width: $tabletL) {
       padding: 2rem 0 !important;
+    }
+    @media (max-width: $desktop) {
+      padding: 2rem 4rem;
     }
   }
 }
@@ -29,10 +34,11 @@ footer {
   font-size: 0.6rem;
   font-family: 'NeueHaasUnicaW1G-Regular' !important;
   span {
-    padding-right: 0.5rem;
+    padding-right: 1rem;
+    padding-bottom: 1rem;
   }
   p {
-    margin-bottom: 0;
+    margin: 0.5rem 0 0 0;
     a {
       text-decoration: none !important;
     }

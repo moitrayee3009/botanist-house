@@ -85,48 +85,62 @@ html {
 //landing page
 .cover-author {
   position: absolute;
-  bottom: 57%;
-  font-size: 1rem !important;
-  letter-spacing: 2.5px !important;
+  bottom: 36%;
+  letter-spacing: 1.5pt;
+  font-weight: $bold;
   color: $pageBackground !important;
+  line-height: 1.2;
+  font-size: 0.8rem !important;
   text-transform: uppercase;
+  padding-left: 1rem;
   @media (max-width: $mobileL) {
-    bottom: 58%;
+    bottom: 50%;
     font-size: 0.8rem !important;
     letter-spacing: 1pt !important;
+    padding-left: 0;
   }
 }
 .cover-text {
   position: absolute;
-  bottom: 25% !important;
+  display: flex;
+  width: 45%;
+  bottom: 20% !important;
   text-align: left;
   text-transform: uppercase;
-  letter-spacing: 4pt;
+  letter-spacing: 2pt;
   font-weight: $bold;
   color: $coverText;
   line-height: 1.2;
-  font-size: 2.875rem !important;
+  font-size: 1.7rem !important;
+  font-family: 'NeueHaasUnicaW1G-Regular';
+  padding-left: 1rem;
   @media (max-width: $mobileL) {
-    bottom: 23%;
+    width: 80%;
+    bottom: 20%;
     font-size: 1.5rem !important;
     letter-spacing: 2pt !important;
+    padding-left: 0;
   }
 }
 
 .cover-button {
   position: absolute;
-  bottom: 15%;
+  bottom: 10%;
   display: flex !important;
   justify-content: flex-start !important;
   margin-top: 2rem !important;
+  padding-left: 1rem;
+  @media (max-width: $mobileL) {
+    padding-left: 0;
+  }
   .wp-block-button__link {
     text-align: center;
-    font-size: 0.75rem;
+    font-size: 0.7rem;
     padding: 0.2rem 2.1rem;
     background-color: $frontPageButton !important;
     color: $pageBackground !important;
-    font-weight: $semiBold;
-    letter-spacing: 0.92;
+    font-weight: $bold !important;
+    letter-spacing: 0.9;
     @media (max-width: $mobileL) {
       font-size: 0.4rem !important;
       letter-spacing: 0.5 !important;

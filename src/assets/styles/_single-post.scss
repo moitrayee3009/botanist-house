@@ -2,12 +2,19 @@
   width: 70%;
   margin-bottom: 0 !important;
   text-align: left !important;
-  padding: 3rem 6rem 0.5rem;
+  padding: 3rem 2.5rem 0.5rem !important;
   text-transform: uppercase !important;
   font-size: 1.8rem;
   color: black !important;
   font-weight: $bold;
   letter-spacing: 3.1px;
+
+  @media (max-width: $tabletL) {
+    padding: 3rem 2rem 0.5rem !important;
+  }
+  @media (min-width: $desktop) {
+    padding: 3rem 4rem 0.5rem !important;
+  }
 }
 
 .single-post .hentry .entry-header .posted-on {
@@ -17,8 +24,14 @@
     text-decoration: none !important;
     cursor: none !important;
     color: $siteHeaderText;
-    padding: 0 6rem !important;
+    padding: 0 2.5rem !important;
     text-transform: uppercase !important;
+    @media (min-width: $desktop) {
+      padding: 0 4rem !important;
+    }
+    @media (max-width: $tabletL) {
+      padding: 0 2rem !important;
+    }
   }
 }
 
@@ -52,10 +65,13 @@
 .hentry .wp-post-image {
   background-size: cover;
   height: auto !important;
-  width: 85%;
+  width: 90%;
   margin: auto;
   @media (max-width: $mobileL) {
-    width: 80%;
+    width: 81% !important;
+  }
+  @media (max-width: $desktop) {
+    width: 93%;
   }
 }
 
@@ -73,8 +89,11 @@
   letter-spacing: -0.64px;
   box-sizing: border-box;
   @media (max-width: $mobileL) {
-    padding: 2rem !important;
+    padding: 0 1rem !important;
     width: 100%;
+  }
+  @media (max-width: $tabletL) {
+    padding: 1rem 0.5rem;
   }
 }
 
@@ -109,7 +128,14 @@
 }
 
 .single-post .wp-block-cover {
-  width: 80% !important;
+  width: 93% !important;
+  height: auto;
   margin: auto;
   background-size: cover;
+  @media (max-width: $tabletL) {
+    width: 93% !important;
+  }
+  @media (max-width: $mobileL) {
+    width: 81% !important;
+  }
 }

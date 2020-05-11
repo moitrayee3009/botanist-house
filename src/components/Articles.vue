@@ -38,11 +38,11 @@ export default {
   components: {
     Spinner
   },
-  mounted () {
+  mounted() {
     this.getPosts()
   },
 
-  data () {
+  data() {
     return {
       postsUrl: config.staging.URL + 'wp-json/wp/v2/posts',
       posts: [],
@@ -52,7 +52,7 @@ export default {
     }
   },
   methods: {
-    getPosts () {
+    getPosts() {
       axios
         .get(this.postsUrl, { params: this.postsData })
         .then((response) => {
@@ -68,7 +68,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "@/assets/styles/_variables.scss";
+@import '@/assets/styles/_variables.scss';
 
 .post {
   display: flex;
@@ -80,12 +80,16 @@ export default {
 
   /* border: 1rem solid white; */
   margin: 2rem auto;
+  /* @media (max-width: $desktop) {
+    width: 93%;
+  } */
 
   .details {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     padding: 3rem;
+    font-family: 'NeueHaasUnicaW1G-Regular';
     .author-name {
       justify-content: flex-start;
       text-align: left;
@@ -134,6 +138,7 @@ export default {
     color: $pageBackground;
     font-weight: $semiBold;
     font-size: 0.7rem;
+    text-transform: uppercase;
   }
 }
 </style>
