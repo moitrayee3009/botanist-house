@@ -32,6 +32,7 @@
 <script>
 import axios from 'axios'
 import Spinner from 'vue-simple-spinner'
+import config from './../config.js'
 
 export default {
   components: {
@@ -43,7 +44,7 @@ export default {
 
   data () {
     return {
-      postsUrl: 'http://botanisthouse.local/wp-json/wp/v2/posts',
+      postsUrl: config.staging.URL + 'wp-json/wp/v2/posts',
       posts: [],
       postsData: {
         per_page: 10
@@ -67,7 +68,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '@/assets/styles/_variables.scss';
+@import "@/assets/styles/_variables.scss";
 
 .post {
   display: flex;
