@@ -5,6 +5,7 @@ import store from './store'
 import upperFirst from 'lodash/upperFirst'
 import camelCase from 'lodash/camelCase'
 import SelectionGrid from '@/components/SelectionGrid.vue'
+import 'hooper/dist/hooper.css'
 
 const requireComponent = require.context(
   './components',
