@@ -16,7 +16,7 @@
             <span>{{ post.author_meta.last_name }}</span>
           </p>
           <p class="post-title">{{ post.title.rendered }}</p>
-          <a :href="post.slug" class="link" target="_blank">
+          <a :href="post.slug" class="link">
             <!-- <img :src="post.fimg_url" /> -->
             Read article
           </a>

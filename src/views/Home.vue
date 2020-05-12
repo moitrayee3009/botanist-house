@@ -41,7 +41,7 @@ export default {
   margin: 0 !important;
 }
 .home-content {
-  margin: 0 2rem 2rem 2rem;
+  margin: 0 2rem 4rem;
 }
 .selection {
   display: flex;

@@ -9,7 +9,8 @@
     format('truetype');
 }
 
-html {
+html,
+body {
   font-family: 'Benguiat', 'NeueHaasUnicaW1G-Regular';
 }
 @import 'variables';
@@ -31,7 +32,6 @@ html {
   margin-top: 0 !important;
 }
 .entry-title {
-  // text-align: center;
   font-size: 1.5rem;
   font-weight: $semiBold;
   color: $pageHeaderText;
@@ -65,9 +65,7 @@ html {
   padding-top: 2rem;
   margin-bottom: 0;
   @media (max-width: $mobileL) {
-    // padding-top: 0 !important;
     padding-bottom: 2rem !important;
-    // margin-bottom: 2rem !important;
   }
 }
 .site-content .col-full {
@@ -77,74 +75,72 @@ html {
   padding: 0 !important;
 }
 
-// storefront-handheld-footer-bar (icon changed to cart)
-.storefront-handheld-footer-bar ul li.cart > a::before {
-  content: '\f07a' !important;
-}
-
 //landing page
-.cover-author {
-  position: absolute;
-  bottom: 36%;
-  letter-spacing: 1.5pt;
-  font-weight: $bold;
-  color: $pageBackground !important;
-  line-height: 1.2;
-  font-size: 0.8rem !important;
-  text-transform: uppercase;
-  padding-left: 1rem;
-  @media (max-width: $mobileL) {
-    bottom: 45%;
-    font-size: 0.8rem !important;
-    letter-spacing: 1pt !important;
-    padding-left: 0;
-  }
-}
-.cover-text {
-  position: absolute;
-  display: flex;
-  width: 45%;
-  bottom: 20% !important;
-  text-align: left;
-  text-transform: uppercase;
-  letter-spacing: 2pt;
-  font-weight: $bold;
-  color: $coverText;
-  line-height: 1.2;
-  font-size: 1.7rem !important;
-  font-family: 'NeueHaasUnicaW1G-Regular';
-  padding-left: 1rem;
-  @media (max-width: $mobileL) {
-    width: 80%;
-    bottom: 20%;
-    font-size: 1.5rem !important;
-    letter-spacing: 2pt !important;
-    padding-left: 0;
-  }
-}
 
-.cover-button {
-  position: absolute;
-  bottom: 10%;
-  display: flex !important;
-  justify-content: flex-start !important;
-  margin-top: 2rem !important;
-  padding-left: 1rem;
-  @media (max-width: $mobileL) {
-    padding-left: 0;
-  }
-  .wp-block-button__link {
-    text-align: center;
-    font-size: 0.7rem;
-    padding: 0.2rem 2.1rem;
-    background-color: $frontPageButton !important;
-    color: $pageBackground !important;
-    font-weight: $bold !important;
-    letter-spacing: 0.9;
+.home .wp-block-cover {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
+  .details {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 3rem 0;
+    font-family: 'NeueHaasUnicaW1G-Regular' !important;
     @media (max-width: $mobileL) {
-      font-size: 0.4rem !important;
-      letter-spacing: 0.5 !important;
+      padding: 1rem 0;
     }
+    .author-name {
+      justify-content: flex-start;
+      text-align: left;
+      text-transform: uppercase;
+      letter-spacing: 1.5pt;
+      font-weight: $bold;
+      color: $pageBackground !important;
+      line-height: 1.2;
+      font-size: 0.8rem !important;
+      padding-bottom: 1rem;
+      span {
+        padding-right: 1rem;
+      }
+      @media (max-width: $mobileL) {
+        font-size: 0.65rem !important;
+        letter-spacing: 2pt !important;
+        span {
+          padding-right: 0.5rem;
+        }
+      }
+    }
+    .post-title {
+      width: 50%;
+      justify-content: flex-start;
+      text-align: left;
+      text-transform: uppercase;
+      letter-spacing: 2pt;
+      font-weight: $bold;
+      color: $coverText;
+      line-height: 1.3;
+      font-size: 1.7rem !important;
+      margin-bottom: 1.2rem;
+      @media (max-width: $mobileL) {
+        width: 80%;
+        font-size: 1.2rem !important;
+        letter-spacing: 2pt !important;
+      }
+    }
+  }
+  .link {
+    display: flex;
+    justify-content: center;
+    width: fit-content;
+    // padding: 0.3rem 3rem;
+    text-align: center;
+    background-color: $frontPageButton;
+    color: $pageBackground;
+    font-weight: $semiBold !important;
+    font-size: 0.7rem;
+    text-transform: uppercase !important;
   }
 }
 

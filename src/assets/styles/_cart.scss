@@ -2,7 +2,9 @@
   width: 68% !important;
   margin: auto;
 }
-
+ul li a.button.wc-forward {
+  background-color: transparent !important;
+}
 .woocommerce table.cart td:nth-of-type(5),
 .woocommerce table.cart th:nth-of-type(5),
 .cart_totals h2 {
