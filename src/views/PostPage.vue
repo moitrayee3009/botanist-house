@@ -1,13 +1,11 @@
 <template>
   <div class="page">
     <h1 class="entry-title">ARTICLES</h1>
-    <div class="content" v-html="content"></div>
     <Articles />
   </div>
 </template>
 
 <script>
-import { getPageContent } from '@/utils/getPageContent.js'
 import Articles from '@/components/Articles.vue'
 
 export default {
@@ -15,13 +13,10 @@ export default {
   components: {
     Articles
   },
-  data() {
+  data () {
     return {
-      content: '...'
+      posts: []
     }
-  },
-  mounted() {
-    this.content = getPageContent()
   }
 }
 </script>

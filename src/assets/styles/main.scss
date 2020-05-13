@@ -1,8 +1,28 @@
-html {
-  font-family: Freight, Avenir, Helvetica, Arial, sans-serif;
+@font-face {
+  font-family: 'NeueHaasUnicaW1G-Regular';
+  src: url('//db.onlinewebfonts.com/t/31267e36af6f8dac65a56e78345e945e.ttf')
+    format('truetype');
+}
+@font-face {
+  font-family: 'Benguiat';
+  src: url('//db.onlinewebfonts.com/t/ef1bf50d9265228b632982bc37bc0171.ttf')
+    format('truetype');
+}
+
+html,
+body {
+  font-family: 'Benguiat', 'NeueHaasUnicaW1G-Regular';
 }
 @import 'variables';
 @import 'nav';
+// @import 'blocks';
+@import 'footer';
+@import 'about';
+@import 'single-product';
+@import 'single-post';
+@import 'checkout';
+@import 'cart';
+@import 'woocommerce';
 
 .home .site-header {
   margin-bottom: 0 !important;
@@ -12,17 +32,16 @@ html {
   margin-top: 0 !important;
 }
 .entry-title {
-  font-family: Freight;
+  font-size: 1.5rem;
   font-weight: $semiBold;
   color: $pageHeaderText;
-  margin-top: -4.5%;
+  margin-top: -3.7%;
   @media (max-width: $tabletL) {
-    margin-top: -8%;
+    margin-top: -6%;
   }
 
   @media (max-width: $mobileL) {
-    margin-top: -14%;
-    font-size: 2rem;
+    margin-top: -12%;
   }
 }
 .page-selection {
@@ -35,21 +54,19 @@ html {
 .content-area-bg-color {
   background-color: $pageBackground !important;
 }
-
+.content-area {
+  margin-bottom: 0 !important;
+}
 .hentry .entry-header {
-  margin-bottom: 0 !important;
-  border-bottom: transparent !important;
-}
-.cat-links,
-.hentry .entry-taxonomy {
-  display: none !important;
+  border-bottom: none !important;
 }
 
-article {
-  margin-bottom: 0 !important;
-}
 #main {
   padding-top: 2rem;
+  margin-bottom: 0;
+  @media (max-width: $mobileL) {
+    padding-bottom: 2rem !important;
+  }
 }
 .site-content .col-full {
   max-width: 100%;
@@ -58,73 +75,103 @@ article {
   padding: 0 !important;
 }
 
-// storefront-handheld-footer-bar (icon changed to cart)
-.storefront-handheld-footer-bar ul li.cart > a::before {
-  content: '\f07a' !important;
-}
+//landing page
 
-// handheld-navigation(mobile view)
-.handheld-navigation {
-  background-color: white;
-  position: absolute;
-  top: 90%;
-  right: 0;
-  z-index: 9999;
-  display: block !important;
-  width: 100%;
-  transition: height 0.01s ease-in-out;
-  ul.menu {
-    width: 100%;
-    height: 650px;
-    max-height: 9999px;
+.home .wp-block-cover {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
+  .details {
     display: flex;
-    flex-flow: column nowrap;
-    align-items: center !important;
-    justify-content: flex-start;
-    text-align: center;
-    li {
-      width: 100%;
-      padding: 1rem;
-      font-size: $lg;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 3rem 0;
+    font-family: 'NeueHaasUnicaW1G-Regular' !important;
+    @media (max-width: $mobileL) {
+      padding: 1rem 0;
+    }
+    .author-name {
+      justify-content: flex-start;
+      text-align: left;
+      text-transform: uppercase;
+      letter-spacing: 1.5pt;
+      font-weight: $bold;
+      color: $pageBackground !important;
+      line-height: 1.2;
+      font-size: 0.8rem !important;
+      padding-bottom: 1rem;
+      span {
+        padding-right: 1rem;
+      }
+      @media (max-width: $mobileL) {
+        font-size: 0.65rem !important;
+        letter-spacing: 2pt !important;
+        span {
+          padding-right: 0.5rem;
+        }
+      }
+    }
+    .post-title {
+      width: 50%;
+      justify-content: flex-start;
+      text-align: left;
+      text-transform: uppercase;
+      letter-spacing: 2pt;
+      font-weight: $bold;
+      color: $coverText;
+      line-height: 1.3;
+      font-size: 1.7rem !important;
+      margin-bottom: 1.2rem;
+      @media (max-width: $mobileL) {
+        width: 80%;
+        font-size: 1.2rem !important;
+        letter-spacing: 2pt !important;
+      }
     }
   }
-}
-
-button.menu-toggle {
-  // border: none !important;
-  font-weight: $bolder;
-  font-size: 1rem;
-  padding: 0.125em 0.75em 0.125em 2.25em !important;
-}
-a:focus,
-.button:focus,
-.button.alt:focus,
-.button.added_to_cart:focus,
-.button.wc-forward:focus,
-button:focus,
-input[type='button']:focus,
-input[type='reset']:focus,
-input[type='submit']:focus {
-  outline: none !important;
-}
-
-//About text
-.about-text {
-  max-width: 60%;
-  text-align: left;
-  font-weight: $semiBold;
-  font-size: $lg;
-  color: $productTitle;
-  letter-spacing: -0.64px;
-  margin: auto;
-  padding: 1rem;
-  @media (max-width: $mobileL) {
-    max-width: 80%;
+  .link {
+    display: flex;
+    justify-content: center;
+    width: fit-content;
+    // padding: 0.3rem 3rem;
+    text-align: center;
+    background-color: $frontPageButton;
+    color: $pageBackground;
+    font-weight: $semiBold !important;
+    font-size: 0.7rem;
+    text-transform: uppercase !important;
   }
 }
 
-//single product page
-
-.product {
-  margin: 0 2rem;
+.frontPage-link {
+  /* border: 1px solid #eeeeee; */
+  width: fit-content;
+  margin: 0 auto;
+  padding-bottom: 0.5rem;
+  a {
+    display: flex;
+    justify-content: center;
+    width: fit-content;
+    padding: 0.3rem 3rem;
+    text-align: center;
+    background-color: $frontPageButton;
+    color: $pageBackground;
+    font-weight: $semiBold;
+    font-size: 0.7rem;
+  }
+  :focus {
+    border: none;
+  }
+  /* :hover {
+      background-color: #eeeeee;
+    } */
+}
+.spin {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: $pageBackground;
+  height: 100vh;
+  width: 100vw;
 }

@@ -1,0 +1,97 @@
+.woocommerce table.cart {
+  width: 68% !important;
+  margin: auto;
+}
+ul li a.button.wc-forward {
+  background-color: transparent !important;
+}
+.woocommerce table.cart td:nth-of-type(5),
+.woocommerce table.cart th:nth-of-type(5),
+.cart_totals h2 {
+  display: none;
+}
+
+td.product-remove,
+th.product-remove {
+  border-right: none !important;
+  width: fit-content !important;
+}
+td.product-thumbnail,
+th.product-thumbnail {
+  border-left: none !important;
+}
+.woocommerce table thead,
+table.shop_table tr th {
+  color: #8e140a;
+  text-align: center;
+}
+table td {
+  vertical-align: middle !important;
+}
+
+.shop_table {
+  width: 40% !important;
+  margin: auto !important;
+}
+.order-total th,
+.cart-subtotal th {
+  width: 50%;
+}
+
+.product-name {
+  width: 56%;
+}
+
+table td,
+th {
+  padding: 0.5em !important;
+  text-align: center !important;
+  background-color: #ffffff !important;
+  border: 0.5px solid #707070 !important;
+}
+
+.wc-proceed-to-checkout .button.checkout-button {
+  width: 40% !important;
+  margin: 1.5rem auto !important;
+  font-size: 0.7rem !important;
+  font-weight: normal;
+  color: #ffefdb !important;
+  text-transform: uppercase;
+}
+
+button[name='update_cart'],
+td.actions {
+  display: none !important;
+}
+@media screen and (max-width: 768px) {
+  .woocommerce table.cart {
+    width: 75% !important;
+    margin: auto;
+  }
+  .wc-proceed-to-checkout .button.checkout-button {
+    width: 55% !important;
+    font-size: 0.5rem;
+  }
+  .shop_table {
+    width: 55% !important;
+    margin: auto !important;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .product-name {
+    width: 100%;
+  }
+  .woocommerce table.cart {
+    width: 90% !important;
+    margin: auto;
+  }
+  .wc-proceed-to-checkout .button.checkout-button {
+    width: 90% !important;
+    font-size: 0.5rem;
+  }
+  .shop_table {
+    width: 90% !important;
+    margin: auto !important;
+  }
+}

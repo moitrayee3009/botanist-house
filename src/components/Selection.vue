@@ -3,10 +3,10 @@
     <a :href="product.slug">
       <div class="product">
         <div class="image" v-if="product.images">
-          <img :src="product.images[0].src" />
+          <img :src="product.images[0].src" alt="product-image" />
         </div>
-        <h4 class="name">{{ product.name }}</h4>
-        <p class="price">€{{ product.price }}.00</p>
+        <!-- <h4 class="name">{{ product.name }}</h4>
+        <p class="price">€{{ product.price }}.00</p> -->
       </div>
     </a>
   </div>
@@ -23,15 +23,16 @@ export default {
 <style lang="scss" scoped>
 @import '@/assets/styles/_variables.scss';
 .container {
+  min-width: 33.33% !important;
   display: flex;
+  justify-content: center;
   flex: 1;
   box-sizing: border-box;
   .product {
     flex-flow: column wrap;
-    text-align: left;
     width: fit-content;
     height: auto;
-    padding: 1rem;
+    padding: 2rem;
     box-sizing: border-box;
 
     .image {
@@ -44,11 +45,15 @@ export default {
       font-size: 1rem;
     }
     .price {
-      color: $priceText;
+      color: $pageHeaderText;
       text-align: left;
       font-size: $xxl;
       margin-top: 0;
     }
+  }
+  @media (max-width: $mobileL) {
+    min-width: 100% !important;
+    justify-content: flex-start !important;
   }
 }
 </style>

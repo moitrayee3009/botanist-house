@@ -1,6 +1,6 @@
 <template>
   <div class="page">
-    <h1 class="entry-title">SELECTION</h1>
+    <h1 class="entry-title">SELECTION&nbsp;/&nbsp;ARCHIVE</h1>
     <div class="content" v-if="products.length > 0">
       <Selection
         v-for="product in products"
@@ -8,21 +8,27 @@
         :product="product"
       />
     </div>
+    <div class="spin" v-else>
+      <Spinner line-fg-color="#8e140a"></Spinner>
+    </div>
   </div>
 </template>
 
 <script>
 import Selection from '@/components/Selection.vue'
 import ProductServices from '@/services/ProductServices.js'
+import Spinner from 'vue-simple-spinner'
 
 export default {
   name: 'SelectionGrid',
+
   components: {
+    Spinner,
     Selection
   },
   data() {
     return {
-      products: [{}]
+      products: []
     }
   },
   mounted() {
@@ -48,13 +54,15 @@ export default {
 
 .content {
   display: flex;
-  justify-content: space-around;
+  flex-wrap: wrap;
+  justify-content: flex-start;
   padding-top: 1rem;
   height: fit-content;
-  margin-left: auto;
-  margin-right: auto;
   @media (max-width: $mobileL) {
-    flex-flow: column wrap;
+    flex-flow: row nowrap;
+    overflow: scroll;
+    width: 100%;
+    height: auto;
   }
 }
 </style>

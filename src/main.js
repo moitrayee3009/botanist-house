@@ -4,6 +4,8 @@ import router from './router/index'
 import store from './store'
 import upperFirst from 'lodash/upperFirst'
 import camelCase from 'lodash/camelCase'
+import SelectionGrid from '@/components/SelectionGrid.vue'
+import 'hooper/dist/hooper.css'
 
 const requireComponent = require.context(
   './components',
@@ -23,8 +25,18 @@ requireComponent.keys().forEach((fileName) => {
 
 Vue.config.productionTip = false
 
-new Vue({
-  router,
-  store,
-  render: (h) => h(App)
-}).$mount('#app')
+if (document.getElementById('selectionGrid')) {
+  new Vue({
+    router,
+    store,
+    render: (h) => h(SelectionGrid)
+  }).$mount('#selectionGrid')
+}
+
+if (document.getElementById('app')) {
+  new Vue({
+    router,
+    store,
+    render: (h) => h(App)
+  }).$mount('#app')
+}

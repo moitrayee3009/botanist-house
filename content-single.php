@@ -20,6 +20,9 @@
 	 */
 	do_action( 'storefront_single_post' );
 
+
+	
+	
 	/**
 	 * Functions hooked in to storefront_single_post_bottom action
 	 *
