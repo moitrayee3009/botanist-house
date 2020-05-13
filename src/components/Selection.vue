@@ -3,7 +3,7 @@
     <a :href="product.slug">
       <div class="product">
         <div class="image" v-if="product.images">
-          <img :src="product.images[0].src" />
+          <img :src="product.images[0].src" alt="product-image" />
         </div>
         <!-- <h4 class="name">{{ product.name }}</h4>
         <p class="price">€{{ product.price }}.00</p> -->
