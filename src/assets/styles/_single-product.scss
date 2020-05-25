@@ -1,4 +1,7 @@
 .single-product {
+  .woocommerce-product-details__short-description {
+    padding-top: 0.6rem;
+  }
   .price {
     color: $pageHeaderText;
     // margin: 0 !important;

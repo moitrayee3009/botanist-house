@@ -79,7 +79,8 @@
     li a {
       padding: 0 1rem !important;
       color: $siteHeaderText;
-      font-size: 1rem;
+      font-size: $xs;
+      letter-spacing: 1.8px;
       .cart-contents {
         height: 1rem !important;
       }
@@ -111,7 +112,7 @@
     background-image: url(assets/noun_cart_1832886.svg);
     content: '';
     height: 1.5em !important;
-    width: 1.5em !important;
+    width: 1em !important;
     font-size: 1rem;
   }
 }

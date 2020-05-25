@@ -26,12 +26,12 @@ export default {
     Spinner,
     Selection
   },
-  data() {
+  data () {
     return {
       products: []
     }
   },
-  mounted() {
+  mounted () {
     ProductServices.getProducts()
       .then((response) => {
         // Successful request
