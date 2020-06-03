@@ -4,7 +4,7 @@
     <div class="selection">
       <SelectionGrid class="selection-feed" />
       <div class="frontPage-link">
-        <router-link to="/selection" target="_blank">
+        <router-link to="/selection">
           SEE MORE
         </router-link>
       </div>
@@ -22,12 +22,12 @@ export default {
   components: {
     SelectionGrid
   },
-  data () {
+  data() {
     return {
       content: '...'
     }
   },
-  mounted () {
+  mounted() {
     this.content = getPageContent()
   }
 }
